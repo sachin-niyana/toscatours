@@ -7,9 +7,7 @@ export default function CustomCards(props) {
         <div>{props.heading}</div>
       </div>
       <div>{props.subheading}</div>
-          <div>
-              
-      </div>
+      <div></div>
     </div>
   );
 }
