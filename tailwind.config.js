@@ -31,6 +31,7 @@ module.exports = {
         gray: "#C6C6C6",
         "medium-gray": "#646464",
         "mist-gray": "#F5F5F5",
+        "neutral-gray": "#dedede",
       },
     },
   },

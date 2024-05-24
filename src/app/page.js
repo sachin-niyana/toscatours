@@ -1,9 +1,9 @@
-import LoginPage from "@/components/LoginPage";
+import SlickSlider from "@/components/login-page/SlickSlider";
 
 export default function Home() {
   return (
     <div>
-      <LoginPage />
+      <SlickSlider />
     </div>
   );
 }
