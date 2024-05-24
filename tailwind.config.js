@@ -14,7 +14,14 @@ module.exports = {
         "sm-13": "13px",
         "3xxl": "32px",
       },
-      color: {
+
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        
+      },
+      colors: {
         "dark-gray": "#4A4A4A",
         "light-gray": "#ADADAE",
         black: "#191919",
@@ -25,11 +32,6 @@ module.exports = {
         gray: "#C6C6C6",
         "medium-gray": "#646464",
         "mist-gray": "#F5F5F5",
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
   },
