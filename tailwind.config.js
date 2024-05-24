@@ -8,8 +8,22 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        "6xl": "64px",
-        "7xl": "75px",
+        xxs: "9px",
+        "xs-10": "10px",
+        "xs-11": "11px",
+        "sm-13": "13px",
+        "3xxl": "32px",
+      },
+      color: {
+        "dark-gray": "#4A4A4A",
+        "light-gray": "#ADADAE",
+        black: "#191919",
+        orange: "#EC6707",
+        cream: "#FEF8F3",
+        green: "#26A212",
+        red: "#FF3830",
+        gray: "#C6C6C6",
+        "medium-gray": "#646464",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
