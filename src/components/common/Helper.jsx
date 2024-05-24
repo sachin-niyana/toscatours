@@ -1,3 +1,11 @@
+import {
+  UmsatzIcon,
+  GreenGrade,
+  BuchungenIcon,
+  KundenIcon,
+  Redgrade,
+} from "../common/Icon";
+
 export const SliderList = [
   {
     image: "/assets/images/login/png/mountain.png",
@@ -15,13 +23,29 @@ export const SliderList = [
     image: "/assets/images/login/png/ice-mountain.png",
   },
 ];
-export const dashboardCard = [
+export const DashboardCard = [
   {
-    cardicon: "/assets/images/common/png/card-icon1.png",
-    heading: "/assets/images/common/png/card-heading1.png",
-    subheading: "/assets/images/common/png/sub-heading.png",
-    grade: "/assets/images/common/png/grade-img.png",
-    grademark: "/assets/images/common/png/grade-mark.png",
-    descripition: "/assets/images/common/png/description.png",
+    cardicon: <UmsatzIcon />,
+    subheading: "Umsatz",
+    heading: "166,580 CHF",
+    grade: <GreenGrade />,
+    grademark: "5%",
+    description: "im letzten Monat",
+  },
+  {
+    cardicon: <BuchungenIcon />,
+    subheading: "Buchungen",
+    heading: "801",
+    grade: <GreenGrade />,
+    grademark: "2%",
+    description: "im letzten Monat",
+  },
+  {
+    cardicon: <KundenIcon />,
+    subheading: "Kunden",
+    heading: "567",
+    grade: <Redgrade />,
+    grademark: "3%",
+    description: "im letzten Monat",
   },
 ];
