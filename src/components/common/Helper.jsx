@@ -1,4 +1,13 @@
-import { DashboardIcon } from "./Icon";
+import {
+  AngeboteIcon,
+  BookingsIcon,
+  BuchungenIcon,
+  CustomersIcon,
+  DashboardIcon,
+  KundenIcon,
+  OffersIcon,
+  ProfileIcon,
+} from "./Icon";
 
 export const SidebarTab = [
   {
@@ -6,23 +15,31 @@ export const SidebarTab = [
     title: "Dashboard",
   },
   {
-    icon: <DashboardIcon />,
-    title: "Dashboard",
+    icon: <KundenIcon />,
+    title: "Kunden",
   },
   {
-    icon: <DashboardIcon />,
-    title: "Dashboard",
+    icon: <AngeboteIcon />,
+    title: "Angebote",
   },
   {
-    icon: <DashboardIcon />,
-    title: "Dashboard",
+    icon: <BuchungenIcon />,
+    title: "Buchungen",
   },
   {
-    icon: <DashboardIcon />,
-    title: "Dashboard",
+    icon: <CustomersIcon />,
+    title: "Customers",
   },
   {
-    icon: <DashboardIcon />,
-    title: "Dashboard",
+    icon: <OffersIcon />,
+    title: "Offers",
+  },
+  {
+    icon: <BookingsIcon />,
+    title: "Bookings",
+  },
+  {
+    icon: <ProfileIcon />,
+    title: "Profile",
   },
 ];
