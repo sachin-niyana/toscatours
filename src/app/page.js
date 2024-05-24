@@ -1,10 +1,12 @@
-import HomePage from "@/components/HomePage";
+import SIdeBar from "@/components/common/SIdeBar";
 import Image from "next/image";
 
 export default function Home() {
-  return (
-    <div>
-      <HomePage />
-    </div>
-  );
+    return ( <
+        div >
+        <
+        SIdeBar / >
+        <
+        /div>
+    );
 }
