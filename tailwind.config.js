@@ -14,7 +14,9 @@ module.exports = {
         "sm-13": "13px",
         "3xxl": "32px",
       },
-
+      screens: {
+        screen_md: "992px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

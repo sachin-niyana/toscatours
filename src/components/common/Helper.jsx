@@ -49,11 +49,3 @@ export const DashboardCard = [
     description: "im letzten Monat",
   },
 ];
-// export const VerkäufeCard = [
-//   {
-//     tittle: "Verkäufe",
-//     monthbtn: "This month",
-//     btnarrow: <BtnArrow />,
-
-//   },
-// ];

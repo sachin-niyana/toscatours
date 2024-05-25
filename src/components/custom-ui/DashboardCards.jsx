@@ -1,6 +1,6 @@
 export default function DashboardCards(props) {
   return (
-    <div className="py-6 pl-6 rounded-3xl bg-white xl:max-w-[341px] lg:max-w-[300px] sm:max-w-[295px] w-full max-h-[164px] h-full">
+    <div className="py-6 pl-6 rounded-3xl bg-white hover:shadow-[0_0_11px_rgba(33,33,33,.2)] transition-all ease-linear duration-300 xl:max-w-[341px] lg:max-w-[300px] sm:max-w-[295px] w-full max-h-[164px] h-full">
       {props.dashboardcard}
       <div className="flex items-center mb-2 gap-2">
         <div>{props.cardicon}</div>
