@@ -23,7 +23,7 @@ const Header = () => {
           Lass uns heute den Umsatz überprüfen!
         </p>
       </div>
-      <div className=" flex items-center gap-4">
+      <div className="flex items-center gap-4">
         <Link rel="stylesheet" href="/">
           <MailIcon />
         </Link>
@@ -35,7 +35,7 @@ const Header = () => {
             </div>
           )}
         </Link>
-        <span className="bg-mist-gray w-[1px] h-10 hidden md:block "></span>
+        <span className="bg-mist-gray w-[1px] h-10 hidden md:block"></span>
         <Link href={"/"} className="relative link flex items-center gap-4">
           <span>
             {" "}
@@ -43,6 +43,7 @@ const Header = () => {
               width={48}
               height={48}
               src="/assets/images/common/webp/ProfileImg.webp"
+              alt="profile Img"
             />
           </span>
           <span className="hidden lg:flex flex-col ">

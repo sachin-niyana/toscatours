@@ -19,13 +19,13 @@ const SIdeBar = () => {
   return (
     <div className="overflow-hidden">
       <div className="bg-mist-gray min-h-screen flex items-start">
-        <div className="max-sm:w-full sm:w-52 md:!w-[295px] pt-6 pb-10 sm:bg-white min-h-screen flex justify-between flex-col">
-          <div className=" flex sm:hidden justify-between ">
+        <div className="max-sm:w-full sm:w-52 md:!w-[295px]  pt-4 sm:pt-6 sm:pb-10 sm:bg-white min-h-screen flex justify-between flex-col">
+          <div className=" flex sm:hidden justify-between px-4 sm:px-0">
             <Link href="/" className="sm:hidden">
               <Image
                 src="/assets/images/common/webp/logo.webp"
-                width={200}
-                height={102}
+                width={138}
+                height={70}
                 alt="logo"
               />
             </Link>
@@ -52,6 +52,7 @@ const SIdeBar = () => {
                     width={48}
                     height={48}
                     src="/assets/images/common/webp/ProfileImg.webp"
+                    alt="Profile Img"
                   />
                 </span>
                 <span className="hidden lg:flex flex-col ">
@@ -122,7 +123,7 @@ const SIdeBar = () => {
               )}
             </div>
           </div>
-          <div className="sm:hidden">
+          <div className="sm:hidden px-4 sm:px-0 ">
             <h2 className="font-bold text-2xl leading-">Hi Stéphane</h2>
             <p className="font-medium text-base text-dark-gray !leading-[115%] ">
               Lass uns heute den Umsatz überprüfen!
@@ -138,26 +139,29 @@ const SIdeBar = () => {
                 alt="logo"
               />
             </Link>
-            <div className="pt-2 flex flex-row sm:flex-col ">
-              {SidebarTab.map((obj, index) => (
-                <Link
-                  key={index}
-                  href={"/"}
-                  className="px-[5.5px] sm:px-8 py-3 mt-4 w-full flex justify-start flex-col sm:flex-row items-center gap-[6px] sm:gap-2 group hover:bg-cream transition-all ease-linear duration-300 hover:text-orange relative before:absolute before:w-full before:h-1 sm:before:w-1 sm:before:h-full before:right-0 before:top-0 before:bg-white before:transition-all before:duration-300 before:ease-linear  sm:before:rounded-lg before:hover:bg-orange "
-                >
-                  <span>{obj.icon}</span>
-                  <span className="font-medium text-xs sm:text-sm leading-normal hidden sm:block">
-                    {obj.title}
-                  </span>
-                  <span className="font-medium text-xs sm:text-sm leading-normal sm:hidden">
-                    {obj.titleSmallscreen}
-                  </span>
-                </Link>
-              ))}
+            <div className="mt-2 bg-white rounded-b">
+              <div className=" flex flex-row sm:flex-col ">
+                {SidebarTab.map((obj, index) => (
+                  <Link
+                    key={index}
+                    href={"/"}
+                    className="bg-white px-[5.5px] sm:px-8 py-3 sm:mt-4 w-full flex justify-start flex-col sm:flex-row items-center gap-[6px] sm:gap-2 group hover:bg-cream transition-all ease-linear duration-300 hover:text-orange relative before:absolute before:w-full before:h-1 sm:before:w-1 sm:before:h-full before:right-0 before:top-0 before:bg-transparent before:transition-all before:duration-300 before:ease-linear  sm:before:rounded-lg before:hover:bg-orange "
+                  >
+                    <span>{obj.icon}</span>
+                    <span className="font-medium text-xs sm:text-sm leading-normal hidden sm:block">
+                      {obj.title}
+                    </span>
+                    <span className="font-medium text-xs sm:text-sm leading-normal sm:hidden">
+                      {obj.titleSmallscreen}
+                    </span>
+                  </Link>
+                ))}
+              </div>
+              <span className="sm:hidden block bg-cool-silver h-[5px] w-[135px] mx-auto rounded-[100px] mt-4 mb-2"></span>
             </div>
           </div>
-          <div className="bg-mist-gray rounded-xl border-dashed border-neutral-gray mx-2 sm:mx-4 md:mx-8 py-[30px] px-2.5 hidden sm:flex flex-col items-center">
-            <div className="bg-orange rounded-[39px] w-10 h-10  flex justify-center items-center mx-auto">
+          <div className="bg-white sm:bg-mist-gray rounded-xl border-dashed border-neutral-gray mx-2 sm:mx-4 md:mx-8 py-[30px] px-2.5 hidden sm:flex flex-col items-center">
+            <div className="bg-orange rounded-[39px] w-10 h-10 flex justify-center items-center mx-auto">
               <PulseIcon />
             </div>
             <h3 className="font-semibold text-sm-13 text-center py-1">
@@ -170,7 +174,7 @@ const SIdeBar = () => {
               oder hierher ziehen.
             </div>
           </div>
-        </div>{" "}
+        </div>
         <div className="hidden sm:block sm:w-11/12">
           <Header />
         </div>
