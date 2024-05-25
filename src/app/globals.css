@@ -8,5 +8,5 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 .dashboard_content_width {
-  @apply max-w-[1210px];
+  @apply max-w-[1090px];
 }

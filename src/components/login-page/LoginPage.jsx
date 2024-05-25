@@ -36,7 +36,7 @@ const LoginPage = () => {
             <div
               onClick={toggleCheck}
               className={`w-10 h-6 flex items-center bg-gray-300 p-1 cursor-pointer transition-colors bg-mist-gray border-[0.5px] border-neutral-gray rounded-full ${
-                isChecked ? "bg-green" : ""
+                isChecked ? "bg-orange" : ""
               }`}
             >
               <div
@@ -45,7 +45,7 @@ const LoginPage = () => {
                 }`}
               />
             </div>
-            <p className="font-normal text-rich-black text-xs">Remember me</p>
+            <p className="font-normal text-light-black text-xs">Remember me</p>
           </div>
           <p className="text-orange text-xs font-normal">Forgot password?</p>
         </div>

@@ -12,17 +12,19 @@ const SlickSlider = () => {
     dots: false,
     infinite: true,
     autoplay: true,
+    autoplaySpeed: 3000,
     arrows: false,
     fade: true,
-    speed: 500,
+    speed: 2000,
     slidesToShow: 1,
     slidesToScroll: 1,
   };
   return (
     <div className="max-h-screen overflow-hidden relative">
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-10">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
         <LoginPage />
       </div>
+      <div className="bg-black opacity-50 w-full min-h-screen absolute z-10"></div>
       <Slider ref={sliderRef} {...settings}>
         {SliderList.map((obj, index) => (
           <Image
