@@ -1,18 +1,18 @@
 export const SliderList = [
   {
-    image: "/assets/images/login/png/mountain.png",
+    image: "/assets/images/login/webp/mountain.webp",
   },
   {
-    image: "/assets/images/login/png/cycleing.png",
+    image: "/assets/images/login/webp/cycleing.webp",
   },
   {
-    image: "/assets/images/login/png/grass.png",
+    image: "/assets/images/login/webp/grass.webp",
   },
   {
-    image: "/assets/images/login/png/house.png",
+    image: "/assets/images/login/webp/house.webp",
   },
   {
-    image: "/assets/images/login/png/ice-mountain.png",
+    image: "/assets/images/login/webp/ice-mountain.webp",
   },
 ];
 export const dashboardCard = [
