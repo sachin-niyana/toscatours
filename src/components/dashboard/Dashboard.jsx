@@ -4,7 +4,7 @@ import { BtnArrow } from "../common/Icon";
 
 export default function Dashboard() {
   return (
-    <div className="bg-mist-gray">
+    <div className="bg-mist-gray min-h-screen">
       <div className="pt-[59.54px] xl:px-12 lg:px-6 sm:px-9 px-4">
         <div className="dashboard_content_width mx-auto">
           <div className="flex flex-row flex-wrap xl:gap-8 lg:justify-between justify-center lg:gap-0 sm:gap-4 gap-6 pb-8">
