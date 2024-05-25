@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.dropdown-content {
+    right: -310px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.link:hover .dropdown-content {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+}
