@@ -6,7 +6,7 @@ import { SidebarTab, SidebarDropdown } from "./Helper";
 import { PulseIcon, ArrowIcon, MailIcon, NotificationIcon } from "./Icon";
 import Header from "./Header";
 
-const SIdeBar = () => {
+const SideBar = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
@@ -183,4 +183,4 @@ const SIdeBar = () => {
   );
 };
 
-export default SIdeBar;
+export default SideBar;
