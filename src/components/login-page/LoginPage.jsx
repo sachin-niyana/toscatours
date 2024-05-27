@@ -23,13 +23,13 @@ const LoginPage = () => {
         <input
           type="text"
           placeholder="Email or phone number"
-          className="w-full px-4 py-3 mt-2 bg-mist-gray border-[0.5px] border-neutral-gray rounded-full placeholder-light-gray text-black font-medium text-base !leading-[160%]"
+          className="w-full px-4 py-3 mt-2 bg-mist-gray border-[0.5px] outline-none border-neutral-gray rounded-full placeholder-light-gray text-black font-medium text-base !leading-[160%]"
         />
         <p className="font-normal text-xs-11 mt-4 text-dark-gray">Password</p>
         <input
-          type="text"
-          placeholder="Email or phone number"
-          className="w-full px-4 py-3 mt-2 bg-mist-gray border-[0.5px] border-neutral-gray rounded-full placeholder-light-gray text-black font-medium text-base !leading-[160%]"
+          type="password"
+          placeholder="Password"
+          className="w-full px-4 py-3 mt-2 bg-mist-gray border-[0.5px] outline-none border-neutral-gray rounded-full placeholder-light-gray text-black font-medium text-base !leading-[160%]"
         />
         <div className="flex items-center justify-between mt-5">
           <div className="flex items-center gap-2">
@@ -49,7 +49,7 @@ const LoginPage = () => {
           </div>
           <p className="text-orange text-xs font-normal">Forgot password?</p>
         </div>
-        <button className="bg-neutral-gray rounded-full w-full py-2 font-medium text-xl mt-6 !leading-normal">
+        <button className="bg-neutral-gray hover:bg-orange hover:text-white transition-all ease-linear duration-300 rounded-full w-full py-2 font-medium text-xl mt-6 !leading-normal">
           Log in
         </button>
       </div>

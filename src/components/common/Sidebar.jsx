@@ -133,7 +133,7 @@ const SideBar = () => {
             <Link href="/" className="hidden sm:block">
               <Image
                 className=" mx-auto"
-                src="/assets/images/common/webp/logo.webp"
+                src="/assets/images/png/logo.png"
                 width={200}
                 height={102}
                 alt="logo"
