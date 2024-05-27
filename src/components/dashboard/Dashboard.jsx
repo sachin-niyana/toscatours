@@ -4,6 +4,8 @@ import DashboardCards from "../custom-ui/DashboardCards";
 import { DashboardCard } from "../../components/common/Helper";
 import { BtnArrow } from "../common/Icon";
 import Link from "next/link";
+import Image from "next/image";
+import graphimg from "../../../public/assets/images/png/graph-img.png";
 
 export default function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
@@ -204,9 +206,9 @@ export default function Dashboard() {
                         0 CHF
                       </p>
                     </div>
-                    <img
-                      src="/assets/images/png/graph-img.png"
-                      alt="graph-img"
+                    <Image
+                      src={graphimg}
+                      alt="graphimg"
                       className="w-full xl:max-w-[406px] sm:max-w-[310px] max-w-[251px]"
                     />
                   </div>
@@ -295,7 +297,6 @@ export default function Dashboard() {
                               March
                             </Link>
                           </li>
-
                           <li>
                             <Link
                               href="#"
