@@ -9,6 +9,12 @@ export default function Dashboard() {
         <div className="dashboard_content_width mx-auto">
           <div className="flex flex-row flex-wrap xl:gap-8 lg:justify-between justify-center lg:gap-0 sm:gap-4 gap-6 sm:pb-8 pb-6">
             {DashboardCard.map((obj, index) => {
+              let textColorClass = "";
+              if (index === 0 || index === 1) {
+                textColorClass = "text-green-500";
+              } else if (index === 2) {
+                textColorClass = "text-red-500";
+              }
               return (
                 <DashboardCards
                   key={index}
