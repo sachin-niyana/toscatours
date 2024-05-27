@@ -41,7 +41,7 @@ export default function BlankDashboard() {
     <div className="bg-mist-gray min-h-screen">
       <div className="pt-[59.54px] xl:px-12 lg:px-6 sm:px-9 px-4">
         <div className="dashboard_content_width mx-auto">
-          <div className="flex flex-row flex-wrap xl:gap-8 lg:justify-between justify-center lg:gap-0 sm:gap-4 gap-6 pb-8">
+          <div className="flex flex-row flex-wrap xl:gap-8 lg:justify-between justify-center lg:gap-0 sm:gap-4 gap-6 sm:pb-8 pb-6">
             {DashboardboxCard.map((obj, id) => {
               return (
                 <DashboardCards
@@ -56,7 +56,7 @@ export default function BlankDashboard() {
               );
             })}
           </div>
-          <div className="flex flex-row flex-wrap xl:gap-8 lg:justify-between max-lg:gap-4 justify-center">
+          <div className="flex flex-row flex-wrap xl:gap-8 lg:justify-between max-lg:gap-6 justify-center">
             <div className="xl:max-w-[528px] lg:w-6/12 screen_md:w-[48%] sm:w-10/12 w-full flex justify-center">
               <div className="py-6 min-[390px]:px-6 px-4 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px] sm:max-w-[480px] max-h-[348px] w-full h-full">
                 <div className="flex justify-between items-center pb-6 xl:pr-8">
