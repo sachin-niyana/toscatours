@@ -1,34 +1,40 @@
 import {
   UmsatzIcon,
   GreenGrade,
-  BuchungenIcon,
-  KundenIcon,
   Redgrade,
+  AngeboteIcon,
+  BuchungenIcon,
+  DashboardIcon,
+  KundenIcon,
+  LogOutIcon,
+  MeinProfileIcon,
+  ProfileIcon,
+  SettingIcon,
   CardIcon,
   CardSubHeading,
-  Heading1,
   Heading2,
-  Heading3,
   Grade,
   GradeMark,
   Description,
+  Heading1,
+  Heading3,
 } from "../common/Icon";
 
 export const SliderList = [
   {
-    image: "/assets/images/login/png/mountain.png",
+    image: "/assets/images/login/webp/mountain.webp",
   },
   {
-    image: "/assets/images/login/png/cycleing.png",
+    image: "/assets/images/login/webp/cycleing.webp",
   },
   {
-    image: "/assets/images/login/png/grass.png",
+    image: "/assets/images/login/webp/grass.webp",
   },
   {
-    image: "/assets/images/login/png/house.png",
+    image: "/assets/images/login/webp/house.webp",
   },
   {
-    image: "/assets/images/login/png/ice-mountain.png",
+    image: "/assets/images/login/webp/ice-mountain.webp",
   },
 ];
 export const DashboardCard = [
@@ -57,6 +63,49 @@ export const DashboardCard = [
     description: "im letzten Monat",
   },
 ];
+export const SidebarTab = [
+  {
+    icon: <DashboardIcon />,
+    title: "Dashboard",
+    titleSmallscreen: "Dashboard",
+  },
+  {
+    icon: <KundenIcon />,
+    title: "Kunden",
+    titleSmallscreen: "Customers",
+  },
+  {
+    icon: <AngeboteIcon />,
+    title: "Angebote",
+    titleSmallscreen: "Offers",
+  },
+  {
+    icon: <BuchungenIcon />,
+    title: "Buchungen",
+    titleSmallscreen: "Bookings",
+  },
+
+  {
+    icon: <ProfileIcon />,
+    title: "Profile",
+    titleSmallscreen: "Profile",
+  },
+];
+
+export const SidebarDropdown = [
+  {
+    icon: <MeinProfileIcon />,
+    title: "Mein Profile",
+  },
+  {
+    icon: <SettingIcon />,
+    title: "Einstellungen",
+  },
+  {
+    icon: <LogOutIcon />,
+    title: "Logout",
+  },
+];
 export const DashboardboxCard = [
   {
     cardicon: <CardIcon />,
@@ -83,3 +132,4 @@ export const DashboardboxCard = [
     description: <Description />,
   },
 ];
+
