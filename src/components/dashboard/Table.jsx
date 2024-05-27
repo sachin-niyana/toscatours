@@ -5,13 +5,19 @@ import { Arrows, Dots, Filtericon, Searchicon } from "../common/Icon";
 import { kunden } from "../common/Helper";
 
 const Table = () => {
-  const itemsPerPage = 1; // Number of items per page
-  const totalPages = Math.ceil(kunden.length / itemsPerPage);
+  const [itemsPerPage, setItemsPerPage] = useState(3); // Default number of items per page
+  const totalPages = 20;
 
   const [currentPage, setCurrentPage] = useState(1);
 
   const handlePageChange = (page) => {
     setCurrentPage(page);
+  };
+
+  const handleItemsPerPageChange = (event) => {
+    const newItemsPerPage = Number(event.target.value);
+    setItemsPerPage(newItemsPerPage);
+    setCurrentPage(1); // Reset to the first page whenever items per page changes
   };
 
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -41,6 +47,65 @@ const Table = () => {
     // If all checkboxes are checked, set the master checkbox as checked
     const allChecked = updatedCheckedItems.every((item) => item);
     setIsAllChecked(allChecked);
+  };
+
+  const renderPaginationButtons = () => {
+    const buttons = [];
+    const showDots = totalPages > 5;
+
+    if (showDots) {
+      if (currentPage <= 4) {
+        for (let i = 1; i <= 4; i++) {
+          buttons.push(i);
+        }
+        buttons.push("...");
+        buttons.push(totalPages);
+      } else if (currentPage > 4 && currentPage < totalPages - 4) {
+        buttons.push(1);
+        buttons.push("...");
+        for (let i = currentPage; i <= currentPage + 1; i++) {
+          buttons.push(i);
+        }
+        buttons.push("...");
+        buttons.push(totalPages);
+      } else {
+        buttons.push(1);
+        buttons.push("...");
+        for (let i = totalPages - 4; i <= totalPages; i++) {
+          buttons.push(i);
+        }
+      }
+    } else {
+      for (let i = 1; i <= totalPages; i++) {
+        buttons.push(i);
+      }
+    }
+
+    return buttons.map((button, index) => {
+      if (button === "...") {
+        return (
+          <li key={index}>
+            <span className="px-4 py-2 text-sm font-medium text-gray-600">
+              ...
+            </span>
+          </li>
+        );
+      }
+      return (
+        <li key={index}>
+          <button
+            className={`px-4 py-2 text-sm font-medium text-dark-gray rounded-xl ${
+              currentPage === button
+                ? "bg-cream text-orange"
+                : "bg-gray-200 text-gray-600"
+            }`}
+            onClick={() => handlePageChange(button)}
+          >
+            {button}
+          </button>
+        </li>
+      );
+    });
   };
 
   return (
@@ -107,9 +172,9 @@ const Table = () => {
                 </tr>
               </thead>
               <tbody>
-                {kunden.map((item, index) => (
+                {visibleItems.map((item, index) => (
                   <tr
-                    key={index}
+                    key={startIndex + index}
                     className="border-t-2 border-b-2 border-neutral-gray"
                   >
                     <td className="text-base flex items-center font-semibold leading-6 text-light-black py-5">
@@ -117,8 +182,10 @@ const Table = () => {
                         <input
                           className="pe-6"
                           type="checkbox"
-                          checked={checkedItems[index]}
-                          onChange={() => handleCheckboxChange(index)}
+                          checked={checkedItems[startIndex + index]}
+                          onChange={() =>
+                            handleCheckboxChange(startIndex + index)
+                          }
                         />
                         {item.ballIcon}
                       </span>
@@ -146,7 +213,6 @@ const Table = () => {
           </div>
         </div>
         {/* Pagination bar */}
-
         <div className="flex justify-between px-6">
           <div className="p-6 flex gap-3 items-center">
             <p className="text-sm font-medium leading-[22.5px] text-medium-gray">
@@ -155,8 +221,10 @@ const Table = () => {
             <label htmlFor="numbers" className=""></label>
             <select
               id="numbers"
-              className="border border-neutral-gray text-sm font-medium leading-[22.5px] outline-0 rounded-lg py-2 px-3"
+              className="border custom-dropdown border-neutral-gray text-sm font-medium leading-[22.5px] outline-0 rounded-lg py-2 px-3 bg-white text-black hover:bg-gray-100 focus:bg-gray-200"
               name="numbers"
+              value={itemsPerPage}
+              onChange={handleItemsPerPageChange}
             >
               <option value="1">1</option>
               <option value="2">2</option>
@@ -165,28 +233,11 @@ const Table = () => {
               <option value="5">5</option>
               <option value="6">6</option>
               <option value="7">7</option>
-              <option value="8">8</option>
             </select>
           </div>
-
           <div className="flex justify-end mt-6">
             <nav className="flex" aria-label="Pagination">
-              <ul className="flex gap-2">
-                {Array.from({ length: totalPages }, (_, index) => (
-                  <li key={index}>
-                    <button
-                      className={`px-4 py-2 text-sm font-medium text-dark-gray rounded-xl ${
-                        currentPage === index + 1
-                          ? "bg-cream text-orange"
-                          : "bg-gray-200 text-gray-600"
-                      }`}
-                      onClick={() => handlePageChange(index + 1)}
-                    >
-                      {index + 1}
-                    </button>
-                  </li>
-                ))}
-              </ul>
+              <ul className="flex gap-2">{renderPaginationButtons()}</ul>
             </nav>
           </div>
         </div>
