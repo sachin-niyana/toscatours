@@ -105,46 +105,46 @@ export default function BlankDashboard() {
                     <NoIcon />
                     <ProductIcon />
                   </div>
-                  <div className="flex gap-[109.89px]">
+                  <div className="flex xl:gap-[109.89px] sm:gap-24 gap-12">
                     <PriceIcon />
                     <ItemSaleIcon />
                   </div>
                 </div>
                 <div className="pt-7 flex justify-between items-center">
-                  <div className="flex gap-7 items-center">
+                  <div className="flex sm:gap-7 gap-4 items-center">
                     <ProductNo1 />
                     <div className="flex flex-col gap-1">
                       <ProductName />
                       <ProductDate1 />
                     </div>
                   </div>
-                  <div className="flex gap-[115.92px]">
+                  <div className="flex xl:gap-[115.92px] sm:gap-[100px] gap-10">
                     <ProductPrice />
                     <SaleItem1 />
                   </div>
                 </div>
                 <div className="pt-7 flex justify-between items-center">
-                  <div className="flex gap-7 items-center">
+                  <div className="flex sm:gap-7 gap-4 items-center">
                     <ProductNo2 />
                     <div className="flex flex-col gap-1">
                       <ProductName />
                       <ProductDate2 />
                     </div>
                   </div>
-                  <div className="flex gap-[115.92px]">
+                  <div className="flex xl:gap-[115.92px] sm:gap-[100px] gap-10">
                     <ProductPrice />
                     <SaleItem2 />
                   </div>
                 </div>
                 <div className="pt-7 flex justify-between items-center">
-                  <div className="flex gap-7 items-center">
+                  <div className="flex sm:gap-7 gap-4 items-center">
                     <ProductNo3 />
                     <div className="flex flex-col gap-1">
                       <ProductName />
                       <ProductDate3 />
                     </div>
                   </div>
-                  <div className="flex gap-[115.92px]">
+                  <div className="flex xl:gap-[115.92px] sm:gap-[100px] gap-10">
                     <ProductPrice />
                     <SaleItem3 />
                   </div>

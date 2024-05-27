@@ -1212,7 +1212,7 @@ export const ProductNo3 = () => {
 export const ProductName = () => {
   return (
     <svg
-      width="138"
+      className="sm:w-[138px] w-[110px]"
       height="21"
       viewBox="0 0 138 21"
       fill="none"
@@ -1245,7 +1245,7 @@ export const ProductName = () => {
 export const ProductDate1 = () => {
   return (
     <svg
-      width="141"
+      className="sm:w-[141px] w-[115px]"
       height="18"
       viewBox="0 0 141 18"
       fill="none"
@@ -1278,7 +1278,7 @@ export const ProductDate1 = () => {
 export const ProductDate2 = () => {
   return (
     <svg
-      width="135"
+      className="sm:w-[135px] w-[115px]"
       height="18"
       viewBox="0 0 135 18"
       fill="none"
@@ -1311,7 +1311,7 @@ export const ProductDate2 = () => {
 export const ProductDate3 = () => {
   return (
     <svg
-      width="132"
+      className="sm:w-[132px] w-[115px]"
       height="18"
       viewBox="0 0 132 18"
       fill="none"
@@ -1344,7 +1344,7 @@ export const ProductDate3 = () => {
 export const ProductPrice = () => {
   return (
     <svg
-      width="69"
+      className="sm:w-[69px] w-[50px]"
       height="21"
       viewBox="0 0 69 21"
       fill="none"
