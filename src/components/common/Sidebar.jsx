@@ -23,7 +23,7 @@ const SideBar = () => {
           <div className=" flex sm:hidden justify-between px-4 sm:px-0">
             <Link href="/" className="sm:hidden">
               <Image
-                src="/assets/images/png/logo.png"
+                src="/assets/images/png/logo.webp"
                 width={138}
                 height={70}
                 alt="logo"
@@ -47,17 +47,16 @@ const SideBar = () => {
                 className="relative link flex items-center gap-4"
               >
                 <span>
-                  {" "}
                   <Image
                     width={48}
                     height={48}
-                    src="/assets/images/common/webp/ProfileImg.webp"
+                    src="/assets/images/png/ProfileImg.webp"
                     alt="Profile Img"
                   />
                 </span>
                 <span className="hidden lg:flex flex-col ">
                   <span className="text-2xl font-bold leading-[144%]">
-                    Stéphane{" "}
+                    Stéphane
                   </span>
                   <span className="text-base font-normal">Geschäftsführer</span>
                 </span>
@@ -108,7 +107,7 @@ const SideBar = () => {
                       <Image
                         width={48}
                         height={48}
-                        src="/assets/images/common/webp/ProfileImg.webp"
+                        src="/assets/images/png/Profile.webp"
                         alt="Profile Img"
                       />
                     </div>
@@ -132,8 +131,8 @@ const SideBar = () => {
           <div>
             <Link href="/" className="hidden sm:block">
               <Image
-                className=" mx-auto"
-                src="/assets/images/common/webp/logo.webp"
+                className="mx-auto"
+                src="/assets/images/png/logo.webp"
                 width={200}
                 height={102}
                 alt="logo"
