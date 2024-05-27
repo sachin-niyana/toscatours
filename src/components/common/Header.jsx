@@ -42,7 +42,7 @@ const Header = () => {
             <Image
               width={48}
               height={48}
-              src="/assets/images/common/webp/ProfileImg.webp"
+              src="/assets/images/png/ProfileImg.webp"
               alt="profile Img"
             />
           </span>
