@@ -10,3 +10,15 @@ body {
 .dashboard_content_width {
   @apply max-w-[1090px];
 }
+
+.dropdown-content {
+  right: -310px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.link:hover .dropdown-content {
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+}
