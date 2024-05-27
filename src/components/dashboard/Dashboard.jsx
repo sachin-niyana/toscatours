@@ -69,7 +69,7 @@ export default function Dashboard() {
                     {isOpen && (
                       <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <ul
-                          className="py-4 px-6 bg-white gap-3 flex flex-col justify-center items-center rounded-2xl lg:h-52 sm:h-44 h-36 overflow-y-scroll"
+                          className="py-4 px-6 bg-white gap-3 flex flex-col justify-start items-center rounded-2xl lg:h-52 sm:h-44 h-36 overflow-y-scroll"
                           role="menu"
                           aria-orientation="vertical"
                           aria-labelledby="options-menu"
@@ -265,7 +265,7 @@ export default function Dashboard() {
                     {Open && (
                       <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <ul
-                          className="py-4 px-6 bg-white gap-3 flex flex-col justify-center items-center rounded-2xl lg:h-52 sm:h-44 h-36 overflow-y-scroll"
+                          className="py-4 px-6 bg-white gap-3 flex flex-col justify-start items-center rounded-2xl lg:h-52 sm:h-44 h-36 overflow-y-scroll"
                           role="menu"
                           aria-orientation="vertical"
                           aria-labelledby="options-menu"
