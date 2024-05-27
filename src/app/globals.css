@@ -40,5 +40,5 @@ input[type="search"]::-webkit-search-cancel-button {
 .table-responsive th,
 .table-responsive td {
   white-space: nowrap;
-  text-align: left;
+  /* text-align: left; */
 }

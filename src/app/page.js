@@ -6,10 +6,10 @@ import SlickSlider from "@/components/login-page/SlickSlider";
 export default function Home() {
   return (
     <div>
-      {/* <SlickSlider />
+      <SlickSlider />
       <Dashboard />
-      <SideBar /> */}
-      <Table/>
+      <SideBar />
+      <Table />
     </div>
   );
 }

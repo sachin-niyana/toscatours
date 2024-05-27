@@ -488,20 +488,7 @@ export const Ball3 = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <g clip-path="url(#clip0_2162_656)">
-        {/* <mask
-          id="mask0_2162_656"
-          style="mask-type:luminance"
-          maskUnits="userSpaceOnUse"
-          x="0"
-          y="0"
-          width="40"
-          height="41"
-        >
-          <path
-            d="M40 20.2198C40 9.17415 31.0457 0.219849 20 0.219849C8.9543 0.219849 0 9.17415 0 20.2198C0 31.2655 8.9543 40.2198 20 40.2198C31.0457 40.2198 40 31.2655 40 20.2198Z"
-            fill="white"
-          />
-        </mask> */}
+       
         <g mask="url(#mask0_2162_656)">
           <path d="M40 0.219849H0V40.2198H40V0.219849Z" fill="#405059" />
           <path
@@ -538,20 +525,7 @@ export const Ball1 = () => {
       className="rounded-full "
       xmlns="http://www.w3.org/2000/svg"
     >
-      {/* <mask
-        id="mask0_2150_403"
-        style="mask-type:luminance"
-        maskUnits="userSpaceOnUse"
-        x="0"
-        y="0"
-        width="40"
-        height="41"
-      >
-        <path
-          d="M40 20.2197C40 9.174 31.0457 0.219696 20 0.219696C8.9543 0.219696 0 9.174 0 20.2197C0 31.2654 8.9543 40.2197 20 40.2197C31.0457 40.2197 40 31.2654 40 20.2197Z"
-          fill="white"
-        />
-      </mask> */}
+   
       <g mask="url(#mask0_2150_403)">
         <path
           d="M39.999 0.219696H-0.000976562V40.2197H39.999V0.219696Z"
