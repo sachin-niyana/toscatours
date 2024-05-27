@@ -18,6 +18,9 @@ import {
   Description,
   Heading1,
   Heading3,
+  Ball1,
+  Ball2,
+  Ball3,
 } from "../common/Icon";
 
 export const SliderList = [
@@ -133,3 +136,46 @@ export const DashboardboxCard = [
   },
 ];
 
+// table
+export const kunden = [
+  {
+    customerName: "Francisco Chang",
+    email: "name@email.ch",
+    location: "Location",
+    bookings: "10",
+    amount: "22 400,98 CHF",
+    ballIcon: <Ball1 />,
+  },
+  {
+    customerName: "Angel Dokidis",
+    email: "name@email.ch",
+    location: "Location",
+    bookings: "8",
+    amount: "8 400,98 CHF",
+    ballIcon: <Ball2 />,
+  },
+  {
+    customerName: "Omar Culhane",
+    email: "name@email.ch",
+    location: "Location",
+    bookings: "29",
+    amount: "40 400,98 CHF",
+    ballIcon: <Ball3 />,
+  },
+  {
+    customerName: "Jakob Lubin",
+    email: "name@email.ch",
+    location: "Location",
+    bookings: "5",
+    amount: "3 400,98 CHF",
+    ballIcon: <Ball1 />,
+  },
+  {
+    customerName: "Lindsey Culhane",
+    email: "name@email.ch",
+    location: "Location",
+    bookings: "15",
+    amount: "32 400,98 CHF",
+    ballIcon: <Ball2 />,
+  },
+];

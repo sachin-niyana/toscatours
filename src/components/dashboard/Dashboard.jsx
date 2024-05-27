@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import { useState } from "react";
 import DashboardCards from "../custom-ui/DashboardCards";
 import { DashboardCard } from "../../components/common/Helper";
 import { BtnArrow } from "../common/Icon";
@@ -32,6 +32,12 @@ export default function Dashboard() {
         <div className="dashboard_content_width mx-auto">
           <div className="flex flex-row flex-wrap xl:gap-8 lg:justify-between justify-center lg:gap-0 sm:gap-4 gap-6 sm:pb-8 pb-6">
             {DashboardCard.map((obj, index) => {
+              let textColorClass = "";
+              if (index === 0 || index === 1) {
+                textColorClass = "text-green-500";
+              } else if (index === 2) {
+                textColorClass = "text-red-500";
+              }
               return (
                 <DashboardCards
                   key={index}
@@ -63,7 +69,7 @@ export default function Dashboard() {
                     {isOpen && (
                       <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <ul
-                          className="py-4 px-6 bg-white gap-3 flex flex-col justify-center items-center rounded-2xl lg:h-64 sm:h-44 h-36 overflow-y-scroll"
+                          className="py-4 px-6 bg-white gap-3 flex flex-col justify-center items-center rounded-2xl h-52 overflow-y-scroll"
                           role="menu"
                           aria-orientation="vertical"
                           aria-labelledby="options-menu"
@@ -259,7 +265,7 @@ export default function Dashboard() {
                     {Open && (
                       <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
                         <ul
-                          className="py-4 px-6 bg-white gap-3 flex flex-col justify-center items-center rounded-2xl"
+                          className="py-4 px-6 bg-white gap-3 flex flex-col justify-center items-center rounded-2xl h-52 overflow-y-scroll"
                           role="menu"
                           aria-orientation="vertical"
                           aria-labelledby="options-menu"
@@ -298,6 +304,78 @@ export default function Dashboard() {
                               onClick={shutDropdown}
                             >
                               April
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              May
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              June
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              July
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              August
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              Sepetmber
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              October
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              November
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              December
                             </Link>
                           </li>
                         </ul>

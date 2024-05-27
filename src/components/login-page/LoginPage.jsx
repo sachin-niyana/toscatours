@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const LoginPage = () => {
@@ -47,7 +48,9 @@ const LoginPage = () => {
             </div>
             <p className="font-normal text-light-black text-xs">Remember me</p>
           </div>
-          <p className="text-orange text-xs font-normal">Forgot password?</p>
+          <Link href="/" className="text-orange text-xs font-normal">
+            Forgot Linkassword?
+          </Link>
         </div>
         <button className="bg-neutral-gray hover:bg-orange hover:text-white transition-all ease-linear duration-300 rounded-full w-full py-2 font-medium text-xl mt-6 !leading-normal">
           Log in

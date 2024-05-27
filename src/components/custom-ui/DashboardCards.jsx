@@ -12,7 +12,7 @@ export default function DashboardCards(props) {
         {props.heading}
       </h1>
       <div className="flex gap-1 items-center">
-        <p className="flex items-center font-medium text-base text-green leading-[163%] gap-1">
+        <p className="flex items-center font-medium text-base leading-[163%] gap-1">
           <span>{props.grade}</span>
           {props.grademark}
         </p>
