@@ -4,21 +4,40 @@
 @tailwind utilities;
 html,
 body {
-    font-family: "Poppins", sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .dashboard_content_width {
-    @apply max-w-[1090px];
+  @apply max-w-[1090px];
 }
 
 .dropdown-content {
-    right: -310px;
-    opacity: 0;
-    visibility: hidden;
+  right: -310px;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .link:hover .dropdown-content {
-    right: 0;
-    opacity: 1;
-    visibility: visible;
+  right: 0;
+  opacity: 1;
+  visibility: visible;
+} /* table */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
+.table-responsive {
+  overflow-x: auto;
+}
+
+.table-responsive table {
+  min-width: 900px;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table-responsive th,
+.table-responsive td {
+  white-space: nowrap;
+  text-align: left;
 }

@@ -1,5 +1,6 @@
 import SideBar from "@/components/common/Sidebar";
 import BlankDashboard from "@/components/dashboard/BlankDashboard";
+import Customers from "@/components/dashboard/Customers";
 import Dashboard from "@/components/dashboard/Dashboard";
 import SlickSlider from "@/components/login-page/SlickSlider";
 
@@ -10,6 +11,7 @@ export default function Home() {
       <Dashboard />
       <SideBar />
       <BlankDashboard />
+      <Customers />
     </div>
   );
 }
