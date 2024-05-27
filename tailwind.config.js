@@ -14,7 +14,9 @@ module.exports = {
         "sm-13": "13px",
         "3xxl": "32px",
       },
-
+      screens: {
+        screen_md: "992px",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -23,7 +25,7 @@ module.exports = {
       colors: {
         "dark-gray": "#4A4A4A",
         "light-gray": "#ADADAE",
-        black: "#191919",
+        "light-black": "#191919",
         orange: "#EC6707",
         cream: "#FEF8F3",
         green: "#26A212",
@@ -31,9 +33,10 @@ module.exports = {
         gray: "#C6C6C6",
         "medium-gray": "#646464",
         "mist-gray": "#F5F5F5",
+        "neutral-gray": "#dedede",
         "cool-silver": "#B9C0C9",
       },
     },
-    plugins: [],
   },
+  plugins: [],
 };
