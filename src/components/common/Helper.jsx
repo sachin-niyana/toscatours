@@ -4,6 +4,14 @@ import {
   BuchungenIcon,
   KundenIcon,
   Redgrade,
+  CardIcon,
+  CardSubHeading,
+  Heading1,
+  Heading2,
+  Heading3,
+  Grade,
+  GradeMark,
+  Description,
 } from "../common/Icon";
 
 export const SliderList = [
@@ -47,5 +55,31 @@ export const DashboardCard = [
     grade: <Redgrade />,
     grademark: "3%",
     description: "im letzten Monat",
+  },
+];
+export const DashboardboxCard = [
+  {
+    cardicon: <CardIcon />,
+    subheading: <CardSubHeading />,
+    heading: <Heading1 />,
+    grade: <Grade />,
+    grademark: <GradeMark />,
+    description: <Description />,
+  },
+  {
+    cardicon: <CardIcon />,
+    subheading: <CardSubHeading />,
+    heading: <Heading2 />,
+    grade: <Grade />,
+    grademark: <GradeMark />,
+    description: <Description />,
+  },
+  {
+    cardicon: <CardIcon />,
+    subheading: <CardSubHeading />,
+    heading: <Heading3 />,
+    grade: <Grade />,
+    grademark: <GradeMark />,
+    description: <Description />,
   },
 ];
