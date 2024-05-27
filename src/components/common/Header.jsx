@@ -50,7 +50,7 @@ const Header = () => {
             <span className="text-2xl font-bold leading-[144%]">Stéphane </span>
             <span className="text-base font-normal">Geschäftsführer</span>
           </span>
-          <span className="group hidden lg:block ">
+          <span className="group arrow hidden lg:block ">
             <ArrowIcon />
           </span>
           <div className="absolute right-[-310px] mt-2 w-64 p-4 rounded-3xl bg-white shadow-lg transition-all duration-300 ease-in-out top-14 dropdown-content">
