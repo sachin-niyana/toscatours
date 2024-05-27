@@ -1,8 +1,31 @@
+"use client";
+import React, { useState } from "react";
 import DashboardCards from "../custom-ui/DashboardCards";
 import { DashboardCard } from "../../components/common/Helper";
 import { BtnArrow } from "../common/Icon";
+import Link from "next/link";
+import Image from "next/image";
+import graphimg from "../../../public/assets/images/png/graph-img.png";
 
 export default function Dashboard() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsOpen(false);
+  };
+  const [Open, setOpen] = useState(false);
+
+  const openDropdown = () => {
+    setOpen(!Open);
+  };
+
+  const shutDropdown = () => {
+    setOpen(false);
+  };
   return (
     <div className="bg-mist-gray min-h-screen">
       <div className="pt-[59.54px] xl:px-12 lg:px-6 sm:px-9 px-4">
@@ -29,10 +52,134 @@ export default function Dashboard() {
                   <p className="text-black font-medium text-xl leading-normal capitalize">
                     Verkäufe
                   </p>
-                  <button className="font-medium text-base leading-normal sm:py-1 py-[2px] sm:pr-2 pr-1 sm:pl-4 pl-3 bg-mist-gray border border-solid border-neutral-gray rounded-full text-light-black flex items-center">
-                    This month
-                    <BtnArrow />
-                  </button>
+                  <div className="relative inline-block">
+                    <button
+                      onClick={toggleDropdown}
+                      className="font-medium text-base leading-normal sm:py-1 py-[2px] sm:pr-2 pr-1 sm:pl-4 pl-3 bg-mist-gray border border-solid border-neutral-gray rounded-full text-light-black flex items-center"
+                    >
+                      This month
+                      <BtnArrow />
+                    </button>
+                    {isOpen && (
+                      <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        <ul
+                          className="py-4 px-6 bg-white gap-3 flex flex-col justify-center items-center rounded-2xl lg:h-64 sm:h-44 h-36 overflow-y-scroll"
+                          role="menu"
+                          aria-orientation="vertical"
+                          aria-labelledby="options-menu"
+                        >
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              january
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              Feb
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              March
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              April
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              May
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              June
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              July
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              August
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              September
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              October
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              November
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={closeDropdown}
+                            >
+                              December
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                  </div>
                 </div>
                 <div className="flex flex-col justify-center">
                   <div className="flex items-center xl:gap-4 sm:gap-3 gap-[9.8px] pb-2">
@@ -53,9 +200,9 @@ export default function Dashboard() {
                         0 CHF
                       </p>
                     </div>
-                    <img
-                      src="/assets/images/png/graph-img.png"
-                      alt="graph-img"
+                    <Image
+                      src={graphimg}
+                      alt="graphimg"
                       className="w-full xl:max-w-[406px] sm:max-w-[310px] max-w-[251px]"
                     />
                   </div>
@@ -101,10 +248,62 @@ export default function Dashboard() {
                   <p className="text-black font-medium text-xl leading-normal capitalize">
                     Top Angebote
                   </p>
-                  <button className="font-medium text-base leading-normal sm:py-1 py-[2px] sm:pr-2 pr-1 sm:pl-4 pl-3 bg-mist-gray border border-solid border-neutral-gray rounded-full text-light-black flex items-center">
-                    This month
-                    <BtnArrow />
-                  </button>
+                  <div className="relative inline-block">
+                    <button
+                      onClick={openDropdown}
+                      className="font-medium text-base leading-normal sm:py-1 py-[2px] sm:pr-2 pr-1 sm:pl-4 pl-3 bg-mist-gray border border-solid border-neutral-gray rounded-full text-light-black flex items-center"
+                    >
+                      This month
+                      <BtnArrow />
+                    </button>
+                    {Open && (
+                      <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        <ul
+                          className="py-4 px-6 bg-white gap-3 flex flex-col justify-center items-center rounded-2xl"
+                          role="menu"
+                          aria-orientation="vertical"
+                          aria-labelledby="options-menu"
+                        >
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              january
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              Feb
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              March
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="block text-black text-sm font-normal leading-normal"
+                              onClick={shutDropdown}
+                            >
+                              April
+                            </Link>
+                          </li>
+                        </ul>
+                      </div>
+                    )}
+                  </div>
                 </div>
                 <div className="flex justify-between pb-4 border-b border-solid border-mist-gray">
                   <div className="flex gap-4 items-center">
