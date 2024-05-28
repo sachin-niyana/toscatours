@@ -1,5 +1,5 @@
 import React from "react";
-import { Arrows, Ball1, Dots, Filtericon, Searchicon } from "../common/Icon";
+import { Arrows, Dots, Filtericon, Searchicon } from "../common/Icon";
 import { kunden } from "../common/Helper";
 
 const Customers = () => {

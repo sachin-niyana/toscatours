@@ -6,28 +6,41 @@ import Image from "next/image";
 import { SidebarDropdown } from "./Helper";
 
 const Header = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSidebarDropDown, setIsSidebarDropDown] = useState(false);
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
-  const openModal = (e) => {
+  const openDropdown = (e) => {
     e.preventDefault();
-    setIsModalOpen(true);
+    setIsSidebarDropDown(true);
   };
-  const closeModal = () => setIsModalOpen(false);
-  const toggleNotification = () => setIsNotificationOpen(!isNotificationOpen);
+  const closeBtn = () => setIsSidebarDropDown(false);
+  const NotificationOpen = () => setIsNotificationOpen(!isNotificationOpen);
   return (
-    <div className="bg-white py-[19px] px-6 lg:px-12 border border-mist-gray w-full flex justify-between items-center">
+    <div className="sm:bg-white py-[19px] px-6 lg:px-12 border border-mist-gray w-full flex justify-between items-center ">
       <div className="hidden sm:block">
-        <h2 className="font-bold text-2xl leading-">Hi Stéphane</h2>
+        <h2 className="font-bold text-2xl !leading-[144%]">Hi Stéphane</h2>
         <p className="font-medium text-base text-dark-gray !leading-[115%] ">
           Lass uns heute den Umsatz überprüfen!
         </p>
       </div>
+      <Link href="/" className="sm:hidden">
+        <Image
+          src="/assets/images/png/logo.webp"
+          width={138}
+          height={70}
+          alt="logo"
+        />
+      </Link>
       <div className="flex items-center gap-4">
-        <Link rel="stylesheet" href="/">
+        <Link rel="stylesheet" className="group" href="/">
           <MailIcon />
         </Link>
-        <Link rel="stylesheet" href="/" onClick={toggleNotification}>
+        <Link
+          rel="stylesheet"
+          className="group"
+          href="/"
+          onClick={NotificationOpen}
+        >
           <NotificationIcon />
           {isNotificationOpen && (
             <div className="absolute top-10 right-0 w-64 p-4 rounded-md bg-white shadow-lg">
@@ -50,44 +63,49 @@ const Header = () => {
             <span className="text-2xl font-bold leading-[144%]">Stéphane </span>
             <span className="text-base font-normal">Geschäftsführer</span>
           </span>
-          <span className="group arrow hidden lg:block ">
+          <span className="group arrow hidden lg:block arrowRotate">
             <ArrowIcon />
           </span>
-          <div className="absolute right-[-310px] mt-2 w-64 p-4 rounded-3xl bg-white shadow-lg transition-all duration-300 ease-in-out top-14 dropdown-content">
+          <div className="absolute mt-2 w-64 p-4 rounded-3xl bg-white shadow-lg transition-all duration-300 ease-in-out top-14 right-0 dropdown-content">
             {SidebarDropdown.map((obj, index) => (
-              <Link
-                key={index}
-                href={"/"}
-                onClick={openModal}
-                className="mx-2 py-[13.5px] flex justify-start group items-center gap-2 group transition-all ease-linear duration-300 hover:text-red "
-              >
-                <span>{obj.icon}</span>
-                <span className="font-medium text-sm leading-normal">
-                  {obj.title}
-                </span>
-              </Link>
+              <span key={index}>
+                <Link
+                  href={"/"}
+                  onClick={openDropdown}
+                  className="mx-2 py-[13.5px] flex justify-start group items-center gap-2 group transition-all ease-linear duration-300 hover:text-red "
+                >
+                  <span>{obj.icon}</span>
+                  <span className="font-medium text-sm leading-normal">
+                    {obj.title}
+                  </span>
+                </Link>
+              </span>
             ))}
             <div className="pt-2 mt-2 flex flex-col border-t border-t-mist-gray">
-              <Link
-                href={"/"}
-                className="font-medium text-sm leading-normal transition-all ease-linear duration-300 hover:text-orange mx-2 py-[13.5px]"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href={"/"}
-                className="font-medium text-sm leading-normal transition-all ease-linear duration-300 hover:text-orange mx-2 py-[13.5px]"
-              >
-                About
-              </Link>
+              <span className="py-[13.5px]">
+                <Link
+                  href={"/"}
+                  className="font-medium text-sm leading-normal transition-all ease-linear duration-300 hover:text-orange mx-2 "
+                >
+                  Privacy Policy
+                </Link>
+              </span>
+              <span className="py-[13.5px]">
+                <Link
+                  href={"/"}
+                  className="font-medium text-sm leading-normal transition-all ease-linear duration-300 hover:text-orange mx-2 "
+                >
+                  About
+                </Link>
+              </span>
             </div>
           </div>
         </Link>
-        {isModalOpen && (
+        {isSidebarDropDown && (
           <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
             <div className="bg-white w-96 p-8 rounded-md shadow-lg relative flex flex-col ">
               <button
-                onClick={closeModal}
+                onClick={closeBtn}
                 className="absolute top-2 right-2 text-white bg-red rounded py-1 px-2"
               >
                 Close
@@ -102,7 +120,7 @@ const Header = () => {
                 />
               </div>
               <h2 className="text-2xl font-bold leading-[144%] pt-2 text-center">
-                Stéphane{" "}
+                Stéphane
               </h2>
               <p className="text-base font-normal text-center">
                 Geschäftsführer

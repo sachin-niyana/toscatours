@@ -37,7 +37,9 @@ module.exports = {
         "cool-silver": "#B9C0C9",
       },
       boxShadow: {
+        cardShadow: "0 5px 5px 0 #DEDEDE",
         xs: "0 0 11px rgba(33, 33, 33, 0.2)",
+        xxs: "4px 4px 24px 0px #48484826",
       },
     },
   },
