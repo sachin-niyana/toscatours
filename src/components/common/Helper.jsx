@@ -52,6 +52,7 @@ export const DashboardCard = [
     heading: "567",
     grade: <Redgrade />,
     grademark: "3%",
+    className: "text-red",
     description: "im letzten Monat",
   },
 ];
@@ -83,7 +84,6 @@ export const SidebarTab = [
     titleSmallscreen: "Profile",
   },
 ];
-
 export const SidebarDropdown = [
   {
     icon: <MeinProfileIcon />,
@@ -96,5 +96,43 @@ export const SidebarDropdown = [
   {
     icon: <LogOutIcon />,
     title: "Logout",
+  },
+];
+export const MonthList = [
+  {
+    title: "January",
+  },
+  {
+    title: "February",
+  },
+  {
+    title: "March",
+  },
+  {
+    title: "April",
+  },
+  {
+    title: "May",
+  },
+  {
+    title: "June",
+  },
+  {
+    title: "July",
+  },
+  {
+    title: "August",
+  },
+  {
+    title: "September",
+  },
+  {
+    title: "October",
+  },
+  {
+    title: "November",
+  },
+  {
+    title: "December",
   },
 ];

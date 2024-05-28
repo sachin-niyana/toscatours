@@ -222,6 +222,7 @@ export const PulseIcon = () => {
 export const MailIcon = () => {
   return (
     <svg
+      className="group-hover:scale-105 transition-all duration-300 ease-linear"
       width="24"
       height="25"
       viewBox="0 0 24 25"
@@ -229,6 +230,7 @@ export const MailIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="transition-all duration-300 ease-linear group-hover:stroke-red"
         d="M4 6.4566L10.1076 11.0689L10.1097 11.0706C10.7878 11.5679 11.1271 11.8167 11.4988 11.9128C11.8272 11.9978 12.1725 11.9978 12.501 11.9128C12.8729 11.8166 13.2132 11.5671 13.8926 11.0689C13.8926 11.0689 17.8101 8.06254 20 6.4566M3 16.2568V8.65679C3 7.53669 3 6.97622 3.21799 6.54839C3.40973 6.17207 3.71547 5.86633 4.0918 5.67458C4.51962 5.4566 5.08009 5.4566 6.2002 5.4566H17.8002C18.9203 5.4566 19.4796 5.4566 19.9074 5.67458C20.2837 5.86633 20.5905 6.17207 20.7822 6.54839C21 6.9758 21 7.53559 21 8.65351V16.2602C21 17.3781 21 17.9371 20.7822 18.3645C20.5905 18.7408 20.2837 19.0471 19.9074 19.2388C19.48 19.4566 18.921 19.4566 17.8031 19.4566H6.19691C5.07899 19.4566 4.5192 19.4566 4.0918 19.2388C3.71547 19.0471 3.40973 18.7408 3.21799 18.3645C3 17.9367 3 17.3769 3 16.2568Z"
         stroke="black"
         strokeWidth="2"
@@ -241,6 +243,7 @@ export const MailIcon = () => {
 export const NotificationIcon = () => {
   return (
     <svg
+      className="group-hover:scale-105 transition-all duration-300 ease-linear"
       width="24"
       height="25"
       viewBox="0 0 24 25"
@@ -248,6 +251,7 @@ export const NotificationIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
+        className="transition-all duration-300 ease-linear group-hover:stroke-red"
         d="M15 17.4566V18.4566C15 20.1135 13.6569 21.4566 12 21.4566C10.3431 21.4566 9 20.1135 9 18.4566V17.4566M15 17.4566H9M15 17.4566H18.5905C18.973 17.4566 19.1652 17.4566 19.3201 17.4044C19.616 17.3046 19.8475 17.0722 19.9473 16.7764C19.9997 16.6209 19.9997 16.4281 19.9997 16.0425C19.9997 15.8738 19.9995 15.7895 19.9863 15.709C19.9614 15.557 19.9024 15.4129 19.8126 15.2878C19.7651 15.2217 19.7048 15.1614 19.5858 15.0424L19.1963 14.6529C19.0706 14.5272 19 14.3567 19 14.179V10.4566C19 6.5906 15.866 3.45659 12 3.4566C8.13401 3.45661 5 6.59061 5 10.4566V14.179C5 14.3568 4.92924 14.5272 4.80357 14.6529L4.41406 15.0424C4.29476 15.1617 4.23504 15.2216 4.1875 15.2878C4.09766 15.413 4.03815 15.557 4.0132 15.709C4 15.7895 4 15.8738 4 16.0426C4 16.4281 4 16.6208 4.05245 16.7763C4.15225 17.0722 4.3848 17.3046 4.68066 17.4044C4.83556 17.4566 5.02701 17.4566 5.40956 17.4566H9"
         stroke="black"
         strokeWidth="2"
@@ -261,7 +265,7 @@ export const NotificationIcon = () => {
 export const ArrowIcon = () => {
   return (
     <svg
-      className="group-hover:rotate-180 transition-all duration-300 ease-linear"
+      className="transition-all duration-300 ease-linear"
       width="24"
       height="25"
       viewBox="0 0 24 25"
@@ -269,7 +273,7 @@ export const ArrowIcon = () => {
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        className="group-hover:stroke-red transition-all duration-300 ease-linear"
+        className="transition-all duration-300 ease-linear"
         d="M15 11.4566L12 14.4566L9 11.4566"
         stroke="black"
         strokeWidth="2"

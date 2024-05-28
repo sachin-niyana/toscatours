@@ -36,6 +36,9 @@ module.exports = {
         "neutral-gray": "#dedede",
         "cool-silver": "#B9C0C9",
       },
+      boxShadow: {
+        cardShadow: "0 5px 5px 0 #DEDEDE",
+      },
     },
   },
   plugins: [],
