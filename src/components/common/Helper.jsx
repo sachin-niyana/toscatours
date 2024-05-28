@@ -95,6 +95,44 @@ export const SidebarTab = [
   },
 ];
 
+export const MonthList = [
+  {
+    title: "January",
+  },
+  {
+    title: "February",
+  },
+  {
+    title: "March",
+  },
+  {
+    title: "April",
+  },
+  {
+    title: "May",
+  },
+  {
+    title: "June",
+  },
+  {
+    title: "July",
+  },
+  {
+    title: "August",
+  },
+  {
+    title: "September",
+  },
+  {
+    title: "October",
+  },
+  {
+    title: "November",
+  },
+  {
+    title: "December",
+  },
+];
 export const SidebarDropdown = [
   {
     icon: <MeinProfileIcon />,

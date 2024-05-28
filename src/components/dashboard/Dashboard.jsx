@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import DashboardCards from "../custom-ui/DashboardCards";
-import { DashboardCard } from "../../components/common/Helper";
+import { DashboardCard, MonthList } from "../../components/common/Helper";
 import { BtnArrow } from "../common/Icon";
 import Link from "next/link";
 import Image from "next/image";
@@ -74,114 +74,18 @@ export default function Dashboard() {
                           aria-orientation="vertical"
                           aria-labelledby="options-menu"
                         >
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              january
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              Feb
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              March
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              April
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              May
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              June
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              July
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              August
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              September
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              October
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              November
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={closeDropdown}
-                            >
-                              December
-                            </Link>
-                          </li>
+                          {MonthList.map((obj, index) => (
+                            <li>
+                              <Link
+                                key={index}
+                                href="#"
+                                className="block text-black text-sm font-normal leading-normal"
+                                onClick={closeDropdown}
+                              >
+                                {obj.title}
+                              </Link>
+                            </li>
+                          ))}
                         </ul>
                       </div>
                     )}
@@ -270,114 +174,18 @@ export default function Dashboard() {
                           aria-orientation="vertical"
                           aria-labelledby="options-menu"
                         >
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              january
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              Feb
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              March
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              April
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              May
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              June
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              July
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              August
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              Sepetmber
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              October
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              November
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="#"
-                              className="block text-black text-sm font-normal leading-normal"
-                              onClick={shutDropdown}
-                            >
-                              December
-                            </Link>
-                          </li>
+                          {MonthList.map((obj, index) => (
+                            <li>
+                              <Link
+                                key={index}
+                                href="#"
+                                className="block text-black text-sm font-normal leading-normal"
+                                onClick={closeDropdown}
+                              >
+                                {obj.title}
+                              </Link>
+                            </li>
+                          ))}
                         </ul>
                       </div>
                     )}
