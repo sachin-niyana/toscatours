@@ -63,6 +63,7 @@ export const DashboardCard = [
     heading: "567",
     grade: <Redgrade />,
     grademark: "3%",
+    className: "text-red",
     description: "im letzten Monat",
   },
 ];
