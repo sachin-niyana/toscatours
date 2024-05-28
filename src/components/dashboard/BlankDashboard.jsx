@@ -1,4 +1,3 @@
-
 import DashboardCards from "../custom-ui/DashboardCards";
 import {
   CardSale1,
@@ -59,7 +58,7 @@ export default function BlankDashboard() {
           </div>
           <div className="flex flex-row flex-wrap xl:gap-8 lg:justify-between max-lg:gap-6 justify-center">
             <div className="xl:max-w-[528px] lg:w-6/12 screen_md:w-[48%] sm:w-10/12 w-full flex justify-center">
-              <div className="py-6 min-[390px]:px-6 px-4 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px] sm:max-w-[480px] max-h-[348px] w-full h-full">
+              <div className="py-6 min-[390px]:px-6 px-4 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px] sm:max-w-[480px] max-h-[348px] w-full h-full">
                 <div className="flex justify-between items-center pb-6 xl:pr-8">
                   <CardSale1 />
                   <div className="flex gap-4 items-center">
@@ -93,7 +92,7 @@ export default function BlankDashboard() {
               </div>
             </div>
             <div className="xl:max-w-[528px] lg:w-6/12 screen_md:w-[48%] sm:w-10/12 w-full flex justify-center">
-              <div className="py-6 min-[390px]:px-6 px-4 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px] sm:max-w-[480px] max-h-[348px] w-full h-full">
+              <div className="py-6 min-[390px]:px-6 px-4 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px] sm:max-w-[480px] max-h-[348px] w-full h-full">
                 <div className="flex justify-between items-center pb-6 xl:pr-8">
                   <CardSale2 />
                   <div className="flex gap-4 items-center">
