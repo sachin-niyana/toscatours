@@ -6,15 +6,15 @@ import Image from "next/image";
 import { SidebarDropdown } from "./Helper";
 
 const Header = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isSidebarDropDown, setIsSidebarDropDown] = useState(false);
   const [isNotificationOpen, setIsNotificationOpen] = useState(false);
 
-  const openModal = (e) => {
+  const openDropdown = (e) => {
     e.preventDefault();
-    setIsModalOpen(true);
+    setIsSidebarDropDown(true);
   };
-  const closeModal = () => setIsModalOpen(false);
-  const toggleNotification = () => setIsNotificationOpen(!isNotificationOpen);
+  const closeBtn = () => setIsModalOpen(false);
+  const NotificationOpen = () => setIsNotificationOpen(!isNotificationOpen);
   return (
     <div className="sm:bg-white py-[19px] px-6 lg:px-12 border border-mist-gray w-full flex justify-between items-center ">
       <div className="hidden sm:block">
@@ -39,7 +39,7 @@ const Header = () => {
           rel="stylesheet"
           className="group"
           href="/"
-          onClick={toggleNotification}
+          onClick={NotificationOpen}
         >
           <NotificationIcon />
           {isNotificationOpen && (
@@ -71,7 +71,7 @@ const Header = () => {
               <span key={index}>
                 <Link
                   href={"/"}
-                  onClick={openModal}
+                  onClick={openDropdown}
                   className="mx-2 py-[13.5px] flex justify-start group items-center gap-2 group transition-all ease-linear duration-300 hover:text-red "
                 >
                   <span>{obj.icon}</span>
@@ -101,11 +101,11 @@ const Header = () => {
             </div>
           </div>
         </Link>
-        {isModalOpen && (
+        {isSidebarDropDown && (
           <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
             <div className="bg-white w-96 p-8 rounded-md shadow-lg relative flex flex-col ">
               <button
-                onClick={closeModal}
+                onClick={closeBtn}
                 className="absolute top-2 right-2 text-white bg-red rounded py-1 px-2"
               >
                 Close

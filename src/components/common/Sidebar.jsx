@@ -39,7 +39,7 @@ const SideBar = () => {
           <span className="sm:hidden block bg-cool-silver h-[5px] w-[135px] mx-auto rounded-[100px] mt-4 mb-2"></span>
         </div>
       </div>
-      <div className="bg-white sm:bg-mist-gray rounded-xl border-dashed border-neutral-gray mx-2 sm:mx-4 lg:mx-8 py-5 md:py-[30px] px-2.5 hidden sm:flex flex-col items-center hover:shadow-cardShadow transition-all duration-300 ease-linear">
+      <div className="bg-white sm:bg-mist-gray rounded-xl border-dashed border-neutral-gray mx-2 sm:mx-4 lg:mx-8 py-5 md:py-[30px] px-2.5 hidden sm:flex flex-col items-center hover:shadow-cardShadow transition-all duration-300 ease-linear cursor-pointer">
         <div className="bg-orange rounded-[39px] w-10 h-10 flex justify-center items-center mx-auto">
           <PulseIcon />
         </div>
