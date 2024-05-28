@@ -13,7 +13,7 @@ export default function Home() {
       <div className="overflow-hidden">
         <div className="bg-mist-gray min-h-screen flex items-start">
           <SideBar />
-          <div className=" sm:w-11/12">
+          <div className="sm:w-11/12">
             <Header />
             <Dashboard />
             {/* <Table /> */}

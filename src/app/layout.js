@@ -1,7 +1,6 @@
-import { Inter } from "next/font/google";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
+import SideBar from "@/components/common/Sidebar";
+import Header from "@/components/common/Header";
 
 export const metadata = {
   title: "Toscatours",
@@ -11,7 +10,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        <div className="overflow-hidden">
+          <div className="bg-mist-gray min-h-screen flex items-start">
+            <SideBar />
+            <div className="sm:w-11/12">
+              <Header />
+              {children}
+            </div>{" "}
+          </div>{" "}
+        </div>{" "}
+      </body>
     </html>
   );
 }
