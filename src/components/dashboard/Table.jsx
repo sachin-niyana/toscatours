@@ -109,9 +109,9 @@ const Table = () => {
   };
 
   return (
-    <div className="bg-mist-gray py-10 px-5 mb-5 sm:mb-0 ">
-      <div className="rounded-3xl  bg-white mb-16 lg:mb-0">
-        <div className="pt-6 ">
+    <div className="bg-mist-gray py-10 px-5 w-full overflow-x-hidden">
+      <div className="rounded-3xl bg-white max-w-[1088px] ">
+        <div className="pt-6 overflow-hidden">
           <nav className="flex px-4 md:px-6 gap-3 md:gap-6 pb-6 justify-between items-center">
             <div className="bg-mist-gray py-[11px] px-4 w-full flex gap-3 items-center rounded-3xl border-[.5px] border-neutral-gray">
               <Searchicon />
@@ -128,8 +128,8 @@ const Table = () => {
               Filters
             </button>
           </nav>
-          <div className="table-responsive overflow-x-scroll ">
-            <table className="w-full ">
+          <div className="overflow-x-scroll">
+            <table className="w-full min-w-[900px]">
               <thead>
                 <tr className="border-t-2 border-neutral-gray">
                   <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-6">
@@ -213,8 +213,8 @@ const Table = () => {
           </div>
         </div>
         {/* Pagination bar */}
-        <div className="flex flex-col sm:flex-row justify-between px-6">
-          <div className="p-4 sm:p-6 flex gap-3 justify-center sm:justify-normal items-center">
+        <div className="flex justify-between px-6 w-full">
+          <div className="p-6 flex gap-3 items-center">
             <p className="text-sm font-medium leading-[22.5px] text-medium-gray">
               Show result:
             </p>

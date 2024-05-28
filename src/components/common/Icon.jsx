@@ -57,9 +57,10 @@ export const Redgrade = () => {
     </svg>
   );
 };
-export const BtnArrow = () => {
+export const BtnArrow = (props) => {
   return (
     <svg
+      className={`${props.className}`}
       width="40"
       height="40"
       viewBox="0 0 40 40"

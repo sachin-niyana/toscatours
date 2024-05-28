@@ -1,8 +1,7 @@
 import Header from "@/components/common/Header";
 import SideBar from "@/components/common/Sidebar";
-import Table from "@/components/dashboard/Table";
 // import Customers from "@/components/dashboard/Customers";
-// import Dashboard from "@/components/dashboard/Dashboard";
+import Dashboard from "@/components/dashboard/Dashboard";
 import SlickSlider from "@/components/login-page/SlickSlider";
 
 export default function Home() {
@@ -12,8 +11,9 @@ export default function Home() {
       <div className="overflow-hidden">
         <div className="bg-mist-gray min-h-screen flex items-start">
           <SideBar />
-          <div className=" w-full">
-            <Header /> {/* <Dashboard /> */} <Table />
+          <div className="sm:w-11/12">
+            <Header />
+            <Dashboard /> {/* <Table /> */}{" "}
           </div>{" "}
         </div>{" "}
       </div>{" "}

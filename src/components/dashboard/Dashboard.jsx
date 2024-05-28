@@ -22,9 +22,6 @@ export default function Dashboard() {
     setOpen(!Open);
   };
 
-  const shutDropdown = () => {
-    setOpen(false);
-  };
   return (
     <div className="bg-mist-gray pb-20 sm:pb-0 ">
       <div className="pt-12 sm:pt-9 pb-12 md:pb-0  xl:mx-8 xl:px-0 lg:px-6 px-6 max-xl:max-h-[calc(100vh-104px)] max-xl:overflow-y-scroll">
@@ -60,18 +57,21 @@ export default function Dashboard() {
           <div className="flex flex-row flex-wrap -mx-3 justify-center">
             <div className=" lg:w-6/12 w-full px-3 xl:px-4 ">
               <div className=" flex lg:block justify-center">
-                <div className="py-6 px-4 xl:px-6 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px]  min-h-[348px] w-full ">
+                <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px]  min-h-[348px] w-full ">
                   <div className="flex justify-between items-center mb-4">
-                    <p className="text-black font-medium text-xl leading-normal capitalize">
+                    <p className="text-black sm:block hidden font-medium text-xl leading-normal capitalize">
                       Verkäufe
+                    </p>
+                    <p className="text-black sm:hidden block font-medium text-xl leading-normal capitalize">
+                      Sales
                     </p>
                     <div className="relative inline-block">
                       <button
                         onClick={openDropdown}
-                        className="font-medium text-base leading-normal sm:py-1 py-[2px] sm:pr-2 pr-1 sm:pl-4 pl-3 bg-mist-gray border border-solid border-neutral-gray rounded-full text-light-black flex items-center"
+                        className="font-medium sm:text-base text-xs leading-normal sm:py-1 sm:py-05 py-1 sm:pr-2 pr-1 sm:pl-4 pl-3 bg-mist-gray border border-solid border-neutral-gray rounded-full text-light-black flex items-center"
                       >
                         This month
-                        <BtnArrow />
+                        <BtnArrow className="sm:w-10 w-7 sm:h-10 h-7" />
                       </button>
                       {Open && (
                         <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
@@ -167,18 +167,21 @@ export default function Dashboard() {
             </div>
             <div className=" lg:w-6/12 w-full px-3 xl:px-4 pt-6 md:pt-8 lg:pt-0">
               <div className=" flex lg:block lg:justify-end justify-center">
-                <div className="py-6 px-4 xl:px-6 hover:shadow-[0_0_11px_rgba(33,33,33,.2)] transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px]  min-h-[348px] w-full">
+                <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px]  min-h-[348px] w-full">
                   <div className="flex justify-between items-center mb-4">
-                    <p className="text-black font-medium text-xl leading-normal capitalize">
+                    <p className="text-black sm:block hidden font-medium text-xl leading-normal capitalize">
                       Top Angebote
+                    </p>
+                    <p className="text-black sm:hidden block font-medium text-xl leading-normal capitalize">
+                      Top Offers
                     </p>
                     <div className="relative inline-block">
                       <button
                         onClick={toggleDropdown}
-                        className="font-medium text-base leading-normal sm:py-1 py-[2px] sm:pr-2 pr-1 sm:pl-4 pl-3 bg-mist-gray border border-solid border-neutral-gray rounded-full text-light-black flex items-center"
+                        className="font-medium sm:text-base text-xs leading-normal sm:py-1 sm:py-05 py-1 sm:pr-2 pr-1 sm:pl-4 pl-3 bg-mist-gray border border-solid border-neutral-gray rounded-full text-light-black flex items-center"
                       >
                         This month
-                        <BtnArrow />
+                        <BtnArrow className="sm:w-10 w-7 sm:h-10 h-7" />
                       </button>
                       {isOpen && (
                         <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
