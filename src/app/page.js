@@ -1,5 +1,6 @@
 import Header from "@/components/common/Header";
 import SideBar from "@/components/common/Sidebar";
+import Customers from "@/components/dashboard/Customers";
 // import Customers from "@/components/dashboard/Customers";
 import Dashboard from "@/components/dashboard/Dashboard";
 import Table from "@/components/dashboard/Table";
@@ -14,8 +15,8 @@ export default function Home() {
           <SideBar />
           <div className=" sm:w-11/12">
             <Header />
-            {/* <Dashboard /> */}
-            <Table />
+            <Dashboard />
+            {/* <Table /> */}
           </div>{" "}
         </div>{" "}
       </div>{" "}
