@@ -13,7 +13,7 @@ const Header = () => {
     e.preventDefault();
     setIsSidebarDropDown(true);
   };
-  const closeBtn = () => setIsModalOpen(false);
+  const closeBtn = () => setIsSidebarDropDown(false);
   const NotificationOpen = () => setIsNotificationOpen(!isNotificationOpen);
   return (
     <div className="sm:bg-white py-[19px] px-6 lg:px-12 border border-mist-gray w-full flex justify-between items-center ">
@@ -66,7 +66,7 @@ const Header = () => {
           <span className="group arrow hidden lg:block arrowRotate">
             <ArrowIcon />
           </span>
-          <div className="absolute mt-2 w-64 p-4 rounded-3xl bg-white shadow-lg transition-all duration-300 ease-in-out top-14 dropdown-content">
+          <div className="absolute mt-2 w-64 p-4 rounded-3xl bg-white shadow-lg transition-all duration-300 ease-in-out top-14 right-0 dropdown-content">
             {SidebarDropdown.map((obj, index) => (
               <span key={index}>
                 <Link
