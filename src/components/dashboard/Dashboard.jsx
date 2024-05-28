@@ -1,11 +1,11 @@
 "use client";
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
-import DashboardCards from "../custom-ui/DashboardCards";
+import graphimg from "../../../public/assets/images/png/graph-img.png";
 import { DashboardCard, MonthList } from "../../components/common/Helper";
 import { BtnArrow } from "../common/Icon";
-import Link from "next/link";
-import Image from "next/image";
-import graphimg from "../../../public/assets/images/png/graph-img.png";
+import DashboardCards from "../custom-ui/DashboardCards";
 
 export default function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
