@@ -7,7 +7,7 @@ import { PulseIcon } from "./Icon";
 
 const SideBar = () => {
   return (
-    <div className="sm:w-56 lg:!w-[295px]  pt-4 sm:pt-6 sm:pb-10 sm:bg-white min-h-screen sm:flex justify-between flex-col">
+    <div className="sm:min-w-56 lg:min-w-[295px]  pt-4 sm:pt-6 sm:pb-10 sm:bg-white min-h-screen sm:flex justify-between flex-col">
       <div>
         <Link href="/" className="hidden sm:block">
           <Image
@@ -18,7 +18,7 @@ const SideBar = () => {
             alt="logo"
           />
         </Link>
-        <div className="mt-2 bg-white rounded-b max-sm:fixed bottom-0 left-0 right-0">
+        <div className="mt-2 bg-white rounded-b-xl max-sm:fixed bottom-0 left-0 right-0 z-10">
           <div className=" flex flex-row sm:flex-col">
             {SidebarTab.map((obj, index) => (
               <Link

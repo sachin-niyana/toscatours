@@ -5,7 +5,7 @@ import { Arrows, Dots, Filtericon, Searchicon } from "../common/Icon";
 import { kunden } from "../common/Helper";
 
 const Table = () => {
-  const [itemsPerPage, setItemsPerPage] = useState(3); // Default number of items per page
+  const [itemsPerPage, setItemsPerPage] = useState(5); // Default number of items per page
   const totalPages = 20;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -71,7 +71,7 @@ const Table = () => {
       } else {
         buttons.push(1);
         buttons.push("...");
-        for (let i = totalPages - 4; i <= totalPages; i++) {
+        for (let i = totalPages - 5; i <= totalPages; i++) {
           buttons.push(i);
         }
       }
@@ -109,8 +109,8 @@ const Table = () => {
   };
 
   return (
-    <div className="bg-mist-gray py-10 px-5">
-      <div className="rounded-3xl bg-white ">
+    <div className="bg-mist-gray py-10 px-5 mb-5 sm:mb-0 ">
+      <div className="rounded-3xl  bg-white mb-16 lg:mb-0">
         <div className="pt-6 ">
           <nav className="flex px-4 md:px-6 gap-3 md:gap-6 pb-6 justify-between items-center">
             <div className="bg-mist-gray py-[11px] px-4 w-full flex gap-3 items-center rounded-3xl border-[.5px] border-neutral-gray">
@@ -128,8 +128,8 @@ const Table = () => {
               Filters
             </button>
           </nav>
-          <div className="table-responsive">
-            <table className="w-full">
+          <div className="table-responsive overflow-x-scroll ">
+            <table className="w-full ">
               <thead>
                 <tr className="border-t-2 border-neutral-gray">
                   <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-6">
@@ -213,12 +213,12 @@ const Table = () => {
           </div>
         </div>
         {/* Pagination bar */}
-        <div className="flex justify-between px-6">
-          <div className="p-6 flex gap-3 items-center">
+        <div className="flex flex-col sm:flex-row justify-between px-6">
+          <div className="p-4 sm:p-6 flex gap-3 justify-center sm:justify-normal items-center">
             <p className="text-sm font-medium leading-[22.5px] text-medium-gray">
               Show result:
             </p>
-            <label htmlFor="numbers" className=""></label>
+            <label htmlFor="numbers"></label>
             <select
               id="numbers"
               className="border custom-dropdown border-neutral-gray text-sm font-medium leading-[22.5px] outline-0 rounded-lg py-2 px-3 bg-white text-black hover:bg-gray-100 focus:bg-gray-200"
@@ -235,7 +235,7 @@ const Table = () => {
               <option value="7">7</option>
             </select>
           </div>
-          <div className="flex justify-end mt-6">
+          <div className="flex justify-center sm:justify-end my-4 sm:mb-0 sm:mt-6">
             <nav className="flex" aria-label="Pagination">
               <ul className="flex gap-2">{renderPaginationButtons()}</ul>
             </nav>

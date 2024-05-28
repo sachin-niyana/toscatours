@@ -4,39 +4,60 @@
 @tailwind utilities;
 html,
 body {
-  font-family: "Poppins", sans-serif !important;
+    font-family: "Poppins", sans-serif !important;
 }
 
 .dashboard_content_width {
-  @apply max-w-[1090px];
+    @apply max-w-[1090px];
 }
 
 .dropdown-content {
-  top: -410px;
-  opacity: 0;
-  visibility: hidden;
+    top: -410px;
+    opacity: 0;
+    visibility: hidden;
 }
 
 .link:hover .dropdown-content {
-  top: 50px;
-  opacity: 1;
-  visibility: visible;
+    top: 50px;
+    opacity: 1;
+    visibility: visible;
 }
 
 .link:hover .arrowRotate {
-  transform: rotate(180deg);
+    transform: rotate(180deg);
 }
 
 ::-webkit-scrollbar {
-  width: 5px;
+    width: 5px;
+    height: 5px;
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+    background: #f1f1f1;
+    border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #ec6707;
-  border-radius: 10px;
+    background: #ec6707;
+    border-radius: 10px;
+}
+
+input[type="search"]::-webkit-search-cancel-button {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+
+/* .table-responsive {
+    overflow-x: scroll;
+} */
+
+.table-responsive table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table-responsive th,
+.table-responsive td {
+    white-space: nowrap;
 }
