@@ -23,15 +23,12 @@ const SideBar = () => {
             {SidebarTab.map((obj, index) => (
               <Link
                 key={index}
-                href={"/"}
-                className="bg-white px-[5.5px] sm:px-8 py-3 sm:mt-4 w-full flex justify-start flex-col sm:flex-row items-center gap-[6px] sm:gap-2 group hover:bg-cream transition-all ease-linear duration-300 hover:text-orange relative before:absolute before:w-full before:h-1 sm:before:w-1 sm:before:h-full before:right-0 before:top-0 before:bg-transparent before:transition-all before:duration-300 before:ease-linear  sm:before:rounded-lg before:hover:bg-orange "
+                href="/dashboard"
+                className="bg-white px-[5.5px] sm:px-8 py-3 sm:mt-4 w-full flex justify-start flex-col sm:flex-row items-center gap-[6px] sm:gap-2 group hover:bg-cream transition-all ease-linear duration-300 hover:text-orange relative before:absolute before:w-full before:h-1 sm:before:w-1 sm:before:h-full before:right-0 before:top-0 before:bg-transparent before:transition-all before:duration-300 before:ease-linear  sm:before:rounded-lg before:hover:bg-orange"
               >
                 <span>{obj.icon}</span>
-                <span className="font-medium text-xs sm:text-sm leading-normal hidden sm:block">
+                <span className="font-medium text-xs sm:text-sm leading-normal">
                   {obj.title}
-                </span>
-                <span className="font-medium text-xs sm:text-sm leading-normal sm:hidden">
-                  {obj.titleSmallscreen}
                 </span>
               </Link>
             ))}
@@ -47,7 +44,7 @@ const SideBar = () => {
           Daten importieren
         </h3>
         <div className="font-medium text-xxs leading-[144%] text-light-gray text-center">
-          <Link href={"/"} className="text-orange underline pe-1">
+          <Link href="" className="text-orange underline pe-1">
             Datei aussuchen
           </Link>
           oder hierher ziehen.

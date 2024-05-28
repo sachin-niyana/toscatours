@@ -71,22 +71,18 @@ export const SidebarTab = [
   {
     icon: <DashboardIcon />,
     title: "Dashboard",
-    titleSmallscreen: "Dashboard",
   },
   {
     icon: <KundenIcon />,
     title: "Kunden",
-    titleSmallscreen: "Customers",
   },
   {
     icon: <AngeboteIcon />,
     title: "Angebote",
-    titleSmallscreen: "Offers",
   },
   {
     icon: <BuchungenIcon />,
     title: "Buchungen",
-    titleSmallscreen: "Bookings",
   },
 
   {

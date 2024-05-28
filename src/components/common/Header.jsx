@@ -43,9 +43,9 @@ const Header = () => {
         >
           <NotificationIcon />
           {isNotificationOpen && (
-            <div className="absolute top-10 right-0 w-64 p-4 rounded-md bg-white shadow-lg">
-              <p className="text-sm">You are can notification!</p>
-            </div>
+            <span className="absolute top-10 right-0 w-64 p-4 rounded-md bg-white shadow-lg">
+              <span className="text-sm">You are can notification!</span>
+            </span>
           )}
         </Link>
         <span className="bg-mist-gray w-[1px] h-10 hidden md:block"></span>
