@@ -4,7 +4,6 @@ import { DashboardCard, MonthList } from "../../components/common/Helper";
 import { BtnArrow } from "../common/Icon";
 import Image from "next/image";
 import { useState } from "react";
-import Link from "next/link";
 
 export default function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +20,9 @@ export default function Dashboard() {
   const openDropdown = () => {
     setOpen(!Open);
   };
+  const shutDropdown = () => {
+    setOpen(false);
+  };
 
   return (
     <div className="bg-mist-gray pb-20 sm:pb-0 ">
@@ -34,12 +36,6 @@ export default function Dashboard() {
         <div className="w-full 2xl:max-w-[1088px] mx-auto ">
           <div className="flex flex-row flex-wrap -mx-3 justify-center pb-6 md:pb-8">
             {DashboardCard.map((obj, index) => {
-              let textColorClass = "";
-              if (index === 0 || index === 1) {
-                textColorClass = "text-green-500";
-              } else if (index === 2) {
-                textColorClass = "text-red-500";
-              }
               return (
                 <DashboardCards
                   key={index}
@@ -82,15 +78,12 @@ export default function Dashboard() {
                             aria-labelledby="options-menu"
                           >
                             {MonthList.map((obj, index) => (
-                              <li>
-                                <Link
-                                  key={index}
-                                  href="#"
-                                  className="block text-black text-sm font-normal leading-normal"
-                                  onClick={closeDropdown}
-                                >
-                                  {obj.title}
-                                </Link>
+                              <li
+                                key={index}
+                                className="block text-black text-sm font-normal leading-normal cursor-pointer"
+                                onClick={closeDropdown}
+                              >
+                                {obj.title}
                               </li>
                             ))}
                           </ul>
@@ -192,15 +185,12 @@ export default function Dashboard() {
                             aria-labelledby="options-menu"
                           >
                             {MonthList.map((obj, index) => (
-                              <li>
-                                <Link
-                                  key={index}
-                                  href="#"
-                                  className="block text-black text-sm font-normal leading-normal"
-                                  onClick={closeDropdown}
-                                >
-                                  {obj.title}
-                                </Link>
+                              <li
+                                key={index}
+                                className="block text-black text-sm font-normal leading-normal cursor-pointer"
+                                onClick={shutDropdown}
+                              >
+                                {obj.title}
                               </li>
                             ))}
                           </ul>

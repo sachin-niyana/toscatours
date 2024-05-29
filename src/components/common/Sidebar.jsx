@@ -4,8 +4,9 @@ import Link from "next/link";
 import React from "react";
 import { SidebarTab } from "./Helper";
 import { PulseIcon } from "./Icon";
-
+import { usePathname } from "next/navigation";
 const SideBar = () => {
+  const pathname = usePathname();
   return (
     <div className="sm:min-w-56 lg:min-w-[295px]  pt-4 sm:pt-6 sm:pb-10 sm:bg-white min-h-screen sm:flex justify-between flex-col">
       <div>
@@ -23,11 +24,19 @@ const SideBar = () => {
             {SidebarTab.map((obj, index) => (
               <Link
                 key={index}
-                href="/dashboard"
-                className="bg-white px-[5.5px] sm:px-8 py-3 sm:mt-4 w-full flex justify-start flex-col sm:flex-row items-center gap-[6px] sm:gap-2 group hover:bg-cream transition-all ease-linear duration-300 hover:text-orange relative before:absolute before:w-full before:h-1 sm:before:w-1 sm:before:h-full before:right-0 before:top-0 before:bg-transparent before:transition-all before:duration-300 before:ease-linear  sm:before:rounded-lg before:hover:bg-orange"
+                href={obj.to}
+                className={`${
+                  pathname === `${obj.to}`
+                    ? " before:bg-orange bg-cream group"
+                    : ""
+                } px-[5.5px] sm:px-8 py-3 sm:mt-4 w-full flex justify-start flex-col sm:flex-row items-center gap-[6px] sm:gap-2  transition-all ease-linear duration-300 relative before:absolute before:w-full before:h-1 sm:before:w-1 sm:before:h-full before:right-0 before:top-0 before:transition-all before:duration-300 before:ease-linear sm:before:rounded-lg`}
               >
                 <span>{obj.icon}</span>
-                <span className="font-medium text-xs sm:text-sm leading-normal">
+                <span
+                  className={`${
+                    pathname === `${obj.to}` ? "text-orange" : ""
+                  } font-medium text-xs sm:text-sm leading-normal text-black `}
+                >
                   {obj.title}
                 </span>
               </Link>

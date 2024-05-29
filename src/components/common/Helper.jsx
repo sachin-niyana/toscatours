@@ -22,6 +22,7 @@ import {
   Ball2,
   Ball3,
 } from "../common/Icon";
+const openDropdown = null;
 
 export const SliderList = [
   {
@@ -71,24 +72,28 @@ export const SidebarTab = [
   {
     icon: <DashboardIcon />,
     title: "Dashboard",
+    to: "/dashboard",
   },
   {
     icon: <KundenIcon />,
     title: "Kunden",
+    to: "/customers",
   },
   {
     icon: <AngeboteIcon />,
     title: "Angebote",
+    to: "/angebote",
   },
   {
     icon: <BuchungenIcon />,
     title: "Buchungen",
+    to: "/buchungen",
   },
 
   {
     icon: <ProfileIcon />,
     title: "Profile",
-    titleSmallscreen: "Profile",
+    to: "/Profile",
   },
 ];
 
@@ -134,6 +139,7 @@ export const SidebarDropdown = [
   {
     icon: <MeinProfileIcon />,
     title: "Mein Profile",
+    onclick: openDropdown,
   },
   {
     icon: <SettingIcon />,
