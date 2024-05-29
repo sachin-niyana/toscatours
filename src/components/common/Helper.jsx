@@ -146,6 +146,7 @@ export const SidebarDropdown = [
   {
     icon: <LogOutIcon />,
     title: "Logout",
+    to: "/",
   },
 ];
 export const DashboardboxCard = [

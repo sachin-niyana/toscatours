@@ -42,30 +42,29 @@ const Header = () => {
         </Link>
         <span className="bg-mist-gray w-[1px] h-10 hidden md:block"></span>
         <div className="relative link flex items-center gap-4">
-          <span>
-            <Image
-              width={48}
-              height={48}
-              src="/assets/images/png/ProfileImg.webp"
-              alt="profile Img"
-            />
-          </span>
-          <span className="hidden lg:flex flex-col ">
+          <Image
+            width={48}
+            height={48}
+            src="/assets/images/png/ProfileImg.webp"
+            alt="profile Img"
+          />
+
+          <div className="hidden lg:flex flex-col ">
             <span className="text-2xl font-bold leading-[144%] text-black">
               Stéphane{" "}
             </span>
             <span className="text-base font-normal leading-normal text-dark-gray">
               Geschäftsführer
             </span>
-          </span>
+          </div>
           <span className="group arrow hidden lg:block arrowRotate">
             <ArrowIcon />
           </span>
           <div className="absolute mt-2 w-64 p-4 rounded-3xl bg-white shadow-lg transition-all duration-300 ease-in-out top-14 right-0 dropdown-content">
             {SidebarDropdown.map((obj, index) => (
-              <span key={index}>
+              <div key={index}>
                 <Link
-                  href=""
+                  href={obj.to ? obj.to : "#"}
                   onClick={() => openDropdown(obj.e)}
                   className="mx-2 py-[13.5px] flex justify-start group items-center gap-2 group transition-all ease-linear duration-300"
                 >
@@ -74,26 +73,23 @@ const Header = () => {
                     {obj.title}
                   </span>
                 </Link>
-              </span>
+              </div>
             ))}
-            <span className="pt-2 mt-2 flex flex-col border-t border-t-mist-gray">
-              <span className="py-[13.5px]">
-                <Link
-                  href={"/"}
-                  className="font-medium text-sm leading-normal text-black transition-all ease-linear duration-300 hover:text-orange mx-2 "
-                >
-                  Privacy Policy
-                </Link>
-              </span>
-              <span className="py-[13.5px]">
-                <Link
-                  href={"/"}
-                  className="font-medium text-sm text-black leading-normal transition-all ease-linear duration-300 hover:text-orange mx-2 "
-                >
-                  About
-                </Link>
-              </span>
-            </span>
+            <div className="pt-2 mt-2 flex flex-col border-t border-t-mist-gray">
+              <Link
+                href=""
+                className="font-medium text-sm leading-normal text-black transition-all ease-linear duration-300 hover:text-orange mx-2 py-[13.5px]"
+              >
+                Privacy Policy
+              </Link>
+
+              <Link
+                href=""
+                className="font-medium text-sm text-black leading-normal transition-all ease-linear duration-300 hover:text-orange mx-2 py-[13.5px]"
+              >
+                About
+              </Link>
+            </div>
           </div>
         </div>
         {isSidebarDropDown && (

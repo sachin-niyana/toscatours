@@ -8,8 +8,8 @@ import { usePathname } from "next/navigation";
 const SideBar = () => {
   const pathname = usePathname();
   return (
-    <div className="sm:min-w-56 lg:min-w-[295px]  pt-4 sm:pt-6 sm:pb-10 sm:bg-white min-h-screen sm:flex justify-between flex-col">
-      <div>
+    <div className="sm:min-w-56 lg:min-w-[295px] sm:pb-10 sm:bg-white min-h-screen sm:flex justify-between flex-col">
+      <div className="pt-4 sm:pt-6">
         <Link href="/" className="hidden sm:block">
           <Image
             className="mx-auto"
@@ -45,7 +45,7 @@ const SideBar = () => {
           <span className="sm:hidden block bg-cool-silver h-[5px] w-[135px] mx-auto rounded-[100px] mt-4 mb-2"></span>
         </div>
       </div>
-      <div className="bg-white sm:bg-mist-gray rounded-xl border-dashed border-neutral-gray mx-2 sm:mx-4 lg:mx-8 py-5 md:py-[30px] px-2.5 hidden sm:flex flex-col items-center hover:shadow-cardShadow transition-all duration-300 ease-linear cursor-pointer">
+      <div className="bg-white sm:bg-mist-gray rounded-xl border border-dashed border-neutral-gray mx-2 sm:mx-4 lg:mx-8 py-5 md:py-[30px] px-2.5 hidden sm:flex flex-col items-center hover:shadow-cardShadow transition-all duration-300 ease-linear cursor-pointer">
         <div className="bg-orange rounded-[39px] w-10 h-10 flex justify-center items-center mx-auto">
           <PulseIcon />
         </div>

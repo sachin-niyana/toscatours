@@ -109,13 +109,14 @@ const Dashboard = () => {
                           0 CHF
                         </p>
                       </div>
-                      <div className="max-w-[406px]">
+                      <div>
+                        {" "}
                         <Image
                           width={406}
                           height={118}
                           src="/assets/images/png/graph-img.png"
                           alt="graph-img"
-                          className="w-full "
+                          className="w-full max-w-[406px]"
                         />
                       </div>
                     </div>
