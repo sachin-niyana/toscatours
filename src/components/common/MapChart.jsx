@@ -73,6 +73,11 @@ export const MapChart = () => {
         {
           max: 2500,
           min: 0,
+          labels: {
+            formatter: function (val) {
+              return val + " CHF";
+            },
+          },
         },
       ],
       xaxis: {
