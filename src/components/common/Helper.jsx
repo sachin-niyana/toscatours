@@ -70,28 +70,28 @@ export const SidebarTab = [
   {
     icon: <DashboardIcon />,
     title: "Dashboard",
-    titleSmallscreen: "Dashboard",
+    to: "/dashboard",
   },
   {
     icon: <KundenIcon />,
     title: "Kunden",
-    titleSmallscreen: "Customers",
+    to: "/customers",
   },
   {
     icon: <AngeboteIcon />,
     title: "Angebote",
-    titleSmallscreen: "Offers",
+    to: "/angebote",
   },
   {
     icon: <BuchungenIcon />,
     title: "Buchungen",
-    titleSmallscreen: "Bookings",
+    to: "/buchungen",
   },
 
   {
     icon: <ProfileIcon />,
     title: "Profile",
-    titleSmallscreen: "Profile",
+    to: "/Profile",
   },
 ];
 
@@ -137,6 +137,7 @@ export const SidebarDropdown = [
   {
     icon: <MeinProfileIcon />,
     title: "Mein Profile",
+    e: 2,
   },
   {
     icon: <SettingIcon />,
