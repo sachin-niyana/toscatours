@@ -36,6 +36,8 @@ const dates2 = [
 
 export const MapChart = () => {
   useEffect(() => {
+    const weekNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+
     var options = {
       series: [
         {
@@ -71,10 +73,21 @@ export const MapChart = () => {
         {
           max: 2500,
           min: 0,
+          labels: {
+            formatter: function (val) {
+              return val + " CHF";
+            },
+          },
         },
       ],
       xaxis: {
         type: "datetime",
+        labels: {
+          formatter: function (val) {
+            const date = new Date(val);
+            return weekNames[date.getDay()];
+          },
+        },
       },
       tooltip: {
         shared: true,
