@@ -1,17 +1,17 @@
 "use client";
-import React from "react";
 import DashboardCards from "../custom-ui/DashboardCards";
 import { DashboardCardList, MonthList } from "../../components/common/Helper";
 import { BtnArrow } from "../common/Icon";
 import Image from "next/image";
 import { useState } from "react";
 
-const Dashboard = () => {
+export default function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
+
   const closeDropdown = () => {
     setIsOpen(false);
   };
@@ -23,6 +23,7 @@ const Dashboard = () => {
   const shutDropdown = () => {
     setOpen(false);
   };
+
   return (
     <div className="bg-mist-gray pb-20 sm:pb-0 ">
       <div className="pt-12 sm:pt-9 pb-12 md:pb-0  xl:mx-8 xl:px-0 lg:px-6 px-6 max-xl:max-h-[calc(100vh-104px)] max-xl:overflow-y-scroll">
@@ -37,13 +38,13 @@ const Dashboard = () => {
             {DashboardCardList.map((obj, index) => {
               return (
                 <DashboardCards
-                  index={index}
                   key={index}
-                  icon={obj.icon}
+                  cardicon={obj.cardicon}
                   subheading={obj.subheading}
                   heading={obj.heading}
                   grade={obj.grade}
                   grademark={obj.grademark}
+                  className={obj.className}
                   description={obj.description}
                 />
               );
@@ -109,7 +110,8 @@ const Dashboard = () => {
                           0 CHF
                         </p>
                       </div>
-                      <div className="max-w-[406px]">
+                      <div>
+                        {" "}
                         <Image
                           width={406}
                           height={118}
@@ -260,7 +262,7 @@ const Dashboard = () => {
                       </p>
                     </div>
                   </div>
-                  <div className="flex justify-between items-center pt-3">
+                  <div className="flex justify-between items-center pt-3 border-b border-solid border-mist-gray">
                     <div className="flex gap-4 xl:gap-7  items-center">
                       <p className="font-normal text-xs leading-[155%] text-light-gray">
                         3
@@ -291,5 +293,4 @@ const Dashboard = () => {
       </div>
     </div>
   );
-};
-export default Dashboard;
+}
