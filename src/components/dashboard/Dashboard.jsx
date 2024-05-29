@@ -23,6 +23,7 @@ const Dashboard = () => {
   const shutDropdown = () => {
     setOpen(false);
   };
+
   return (
     <div className="bg-mist-gray pb-20 sm:pb-0 ">
       <div className="pt-12 sm:pt-9 pb-12 md:pb-0  xl:mx-8 xl:px-0 lg:px-6 px-6 max-xl:max-h-[calc(100vh-104px)] max-xl:overflow-y-scroll">
