@@ -1,17 +1,17 @@
 "use client";
+import React from "react";
 import DashboardCards from "../custom-ui/DashboardCards";
-import { DashboardCard, MonthList } from "../../components/common/Helper";
+import { DashboardCardList, MonthList } from "../../components/common/Helper";
 import { BtnArrow } from "../common/Icon";
 import Image from "next/image";
 import { useState } from "react";
 
-export default function Dashboard() {
+const Dashboard = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
   };
-
   const closeDropdown = () => {
     setIsOpen(false);
   };
@@ -23,7 +23,6 @@ export default function Dashboard() {
   const shutDropdown = () => {
     setOpen(false);
   };
-
   return (
     <div className="bg-mist-gray pb-20 sm:pb-0 ">
       <div className="pt-12 sm:pt-9 pb-12 md:pb-0  xl:mx-8 xl:px-0 lg:px-6 px-6 max-xl:max-h-[calc(100vh-104px)] max-xl:overflow-y-scroll">
@@ -35,16 +34,16 @@ export default function Dashboard() {
         </div>
         <div className="w-full 2xl:max-w-[1088px] mx-auto ">
           <div className="flex flex-row flex-wrap -mx-3 justify-center pb-6 md:pb-8">
-            {DashboardCard.map((obj, index) => {
+            {DashboardCardList.map((obj, index) => {
               return (
                 <DashboardCards
+                  index={index}
                   key={index}
-                  cardicon={obj.cardicon}
+                  icon={obj.icon}
                   subheading={obj.subheading}
                   heading={obj.heading}
                   grade={obj.grade}
                   grademark={obj.grademark}
-                  className={obj.className}
                   description={obj.description}
                 />
               );
@@ -110,8 +109,7 @@ export default function Dashboard() {
                           0 CHF
                         </p>
                       </div>
-                      <span className="max-w-[406px]">
-                        {" "}
+                      <div className="max-w-[406px]">
                         <Image
                           width={406}
                           height={118}
@@ -119,7 +117,7 @@ export default function Dashboard() {
                           alt="graph-img"
                           className="w-full "
                         />
-                      </span>
+                      </div>
                     </div>
                     <div className="flex lg:gap-[30px] sm:gap-6 gap-[19px] justify-center">
                       <p className="capitalize font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal">
@@ -293,4 +291,5 @@ export default function Dashboard() {
       </div>
     </div>
   );
-}
+};
+export default Dashboard;

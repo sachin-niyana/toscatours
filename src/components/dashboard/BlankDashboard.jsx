@@ -1,4 +1,3 @@
-
 import DashboardCards from "../custom-ui/DashboardCards";
 import {
   CardSale1,
@@ -47,7 +46,7 @@ export default function BlankDashboard() {
               return (
                 <DashboardCards
                   key={id}
-                  cardicon={obj.cardicon}
+                  icon={obj.icon}
                   subheading={obj.subheading}
                   heading={obj.heading}
                   grade={obj.grade}
