@@ -54,11 +54,8 @@ export const MapChart = () => {
       yaxis: {
         labels: {
           formatter: function (val) {
-            return (val / 1000000).toFixed(0);
+            return val + " CHF";
           },
-        },
-        title: {
-          text: "Price",
         },
       },
       xaxis: {
