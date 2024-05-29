@@ -65,7 +65,7 @@ const Header = () => {
             {SidebarDropdown.map((obj, index) => (
               <span key={index}>
                 <Link
-                  href=""
+                  href={obj.to ? obj.to : "#"}
                   onClick={() => openDropdown(obj.e)}
                   className="mx-2 py-[13.5px] flex justify-start group items-center gap-2 group transition-all ease-linear duration-300"
                 >
@@ -79,7 +79,7 @@ const Header = () => {
             <span className="pt-2 mt-2 flex flex-col border-t border-t-mist-gray">
               <span className="py-[13.5px]">
                 <Link
-                  href={"/"}
+                  href=""
                   className="font-medium text-sm leading-normal text-black transition-all ease-linear duration-300 hover:text-orange mx-2 "
                 >
                   Privacy Policy
@@ -87,7 +87,7 @@ const Header = () => {
               </span>
               <span className="py-[13.5px]">
                 <Link
-                  href={"/"}
+                  href=""
                   className="font-medium text-sm text-black leading-normal transition-all ease-linear duration-300 hover:text-orange mx-2 "
                 >
                   About
