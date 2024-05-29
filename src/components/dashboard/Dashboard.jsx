@@ -110,16 +110,16 @@ export default function Dashboard() {
                           0 CHF
                         </p>
                       </div>
-                      <span className="max-w-[406px]">
+                      <div>
                         {" "}
                         <Image
                           width={406}
                           height={118}
                           src="/assets/images/png/graph-img.png"
                           alt="graph-img"
-                          className="w-full "
+                          className="w-full max-w-[406px]"
                         />
-                      </span>
+                      </div>
                     </div>
                     <div className="flex lg:gap-[30px] sm:gap-6 gap-[19px] justify-center">
                       <p className="capitalize font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal">
