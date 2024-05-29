@@ -16,7 +16,6 @@ const dates = [
   { x: new Date(2020, 1, 10).getTime(), y: 850 },
   { x: new Date(2020, 1, 11).getTime(), y: 1020 },
   { x: new Date(2020, 1, 12).getTime(), y: 2300 },
-  // Add more data points as needed
 ];
 const dates2 = [
   { x: new Date(2020, 1, 0).getTime(), y: 300 },
@@ -33,7 +32,6 @@ const dates2 = [
   { x: new Date(2020, 1, 11).getTime(), y: 900 },
   { x: new Date(2020, 1, 12).getTime(), y: 800 },
   { x: new Date(2020, 1, 13).getTime(), y: 300 },
-  // Add more data points as needed
 ];
 
 export const MapChart = () => {
@@ -54,6 +52,9 @@ export const MapChart = () => {
       chart: {
         height: 350,
         type: "line",
+        toolbar: {
+          show: false, // Disable the toolbar
+        },
       },
       stroke: {
         curve: "straight",
@@ -63,19 +64,6 @@ export const MapChart = () => {
         type: "solid",
         opacity: [0.6, 1],
       },
-      labels: [
-        "Dec 01",
-        "Dec 02",
-        "Dec 03",
-        "Dec 04",
-        "Dec 05",
-        "Dec 06",
-        "Dec 07",
-        "Dec 08",
-        "Dec 09 ",
-        "Dec 10",
-        "Dec 11",
-      ],
       markers: {
         size: 0,
       },
@@ -87,7 +75,6 @@ export const MapChart = () => {
       ],
       xaxis: {
         type: "datetime",
-        categories: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
       },
       tooltip: {
         shared: true,
