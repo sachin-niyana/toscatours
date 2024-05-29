@@ -5,7 +5,7 @@ import { Arrows, Dots, Filtericon, Searchicon } from "../common/Icon";
 import { kunden } from "../common/Helper";
 
 const Table = () => {
-  const [itemsPerPage, setItemsPerPage] = useState(3); // Default number of items per page
+  const [itemsPerPage, setItemsPerPage] = useState(5); // Default number of items per page
   const totalPages = 20;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -71,7 +71,7 @@ const Table = () => {
       } else {
         buttons.push(1);
         buttons.push("...");
-        for (let i = totalPages - 4; i <= totalPages; i++) {
+        for (let i = totalPages - 5; i <= totalPages; i++) {
           buttons.push(i);
         }
       }
@@ -218,7 +218,7 @@ const Table = () => {
             <p className="text-sm font-medium leading-[22.5px] text-medium-gray">
               Show result:
             </p>
-            <label htmlFor="numbers" className=""></label>
+            <label htmlFor="numbers"></label>
             <select
               id="numbers"
               className="border custom-dropdown border-neutral-gray text-sm font-medium leading-[22.5px] outline-0 rounded-lg py-2 px-3 bg-white text-black hover:bg-gray-100 focus:bg-gray-200"
@@ -235,7 +235,7 @@ const Table = () => {
               <option value="7">7</option>
             </select>
           </div>
-          <div className="flex justify-end mt-6">
+          <div className="flex justify-center sm:justify-end my-4 sm:mb-0 sm:mt-6">
             <nav className="flex" aria-label="Pagination">
               <ul className="flex gap-2">{renderPaginationButtons()}</ul>
             </nav>
