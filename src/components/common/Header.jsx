@@ -8,8 +8,10 @@ import { SidebarDropdown } from "./Helper";
 const Header = () => {
   const [isSidebarDropDown, setIsSidebarDropDown] = useState(false);
 
-  const openDropdown = () => {
-    setIsSidebarDropDown(true);
+  const openDropdown = (e) => {
+    if (e === 2) {
+      setIsSidebarDropDown(true);
+    }
   };
   const closeBtn = () => setIsSidebarDropDown(false);
 
@@ -64,7 +66,7 @@ const Header = () => {
               <span key={index}>
                 <Link
                   href=""
-                  onClick={obj.onclick}
+                  onClick={() => openDropdown(obj.e)}
                   className="mx-2 py-[13.5px] flex justify-start group items-center gap-2 group transition-all ease-linear duration-300"
                 >
                   <span>{obj.icon}</span>

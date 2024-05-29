@@ -22,7 +22,6 @@ import {
   Ball2,
   Ball3,
 } from "../common/Icon";
-const openDropdown = null;
 
 export const SliderList = [
   {
@@ -138,7 +137,7 @@ export const SidebarDropdown = [
   {
     icon: <MeinProfileIcon />,
     title: "Mein Profile",
-    onclick: openDropdown,
+    e: 2,
   },
   {
     icon: <SettingIcon />,
