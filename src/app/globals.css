@@ -11,22 +11,6 @@ body {
     @apply max-w-[1090px];
 }
 
-.dropdown-content {
-    top: -410px;
-    opacity: 0;
-    visibility: hidden;
-}
-
-.link:hover .dropdown-content {
-    top: 50px;
-    opacity: 1;
-    visibility: visible;
-}
-
-.link:hover .arrowRotate {
-    transform: rotate(180deg);
-}
-
 ::-webkit-scrollbar {
     width: 5px;
     height: 5px;

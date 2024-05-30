@@ -19,14 +19,12 @@ export default function RootLayout({ children }) {
             {" "}
             {pathName !== "/" &&
               pathName !== "/angebote" &&
-              pathName !== "/buchungen" &&
-              pathName !== "/profile" && <SideBar />}{" "}
+              pathName !== "/buchungen" && <SideBar />}{" "}
             <div className="w-full">
               {" "}
               {pathName !== "/" &&
                 pathName !== "/angebote" &&
-                pathName !== "/buchungen" &&
-                pathName !== "/profile" && <Header />}{" "}
+                pathName !== "/buchungen" && <Header />}{" "}
               {children}{" "}
             </div>{" "}
           </div>{" "}

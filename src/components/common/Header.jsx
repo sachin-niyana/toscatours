@@ -6,6 +6,11 @@ import Image from "next/image";
 import { SidebarDropdown } from "./Helper";
 
 const Header = () => {
+  const [dropdownVisible, setDropdownVisible] = useState(false);
+
+  const toggleDropdown = () => {
+    setDropdownVisible(!dropdownVisible);
+  };
   const [isSidebarDropDown, setIsSidebarDropDown] = useState(false);
 
   const openDropdown = (e) => {
@@ -41,7 +46,10 @@ const Header = () => {
           <NotificationIcon />
         </Link>
         <span className="bg-mist-gray w-[1px] h-10 hidden md:block"></span>
-        <div className="relative link flex items-center gap-4">
+        <div
+          onClick={toggleDropdown}
+          className="relative duration-300 ease-linear flex items-center gap-4"
+        >
           <Image
             width={48}
             height={48}
@@ -57,10 +65,18 @@ const Header = () => {
               Geschäftsführer
             </span>
           </div>
-          <span className="group arrow hidden lg:block arrowRotate">
+          <span
+            className={`${
+              dropdownVisible && "rotate-180"
+            } group hidden lg:block duration-300`}
+          >
             <ArrowIcon />
           </span>
-          <div className="absolute mt-2 w-64 p-4 rounded-3xl bg-white shadow-lg transition-all duration-300 ease-in-out top-14 right-0 dropdown-content">
+          <div
+            className={`absolute mt-2 w-64 p-4 rounded-3xl bg-white shadow-lg transition-opacity duration-300 ease-linear top-12 left-0 right-0 ${
+              dropdownVisible ? "opacity-100" : "opacity-0 pointer-events-none"
+            }`}
+          >
             {SidebarDropdown.map((obj, index) => (
               <div key={index}>
                 <Link
