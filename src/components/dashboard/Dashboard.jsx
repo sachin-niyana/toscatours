@@ -38,6 +38,7 @@ export default function Dashboard() {
             {DashboardCardList.map((obj, index) => {
               return (
                 <DashboardCards
+                  index={index}
                   key={index}
                   cardicon={obj.cardicon}
                   subheading={obj.subheading}

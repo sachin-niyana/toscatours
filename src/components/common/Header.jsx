@@ -48,7 +48,7 @@ const Header = () => {
         <span className="bg-mist-gray w-[1px] h-10 hidden md:block"></span>
         <div
           onClick={toggleDropdown}
-          className="relative duration-300 ease-linear flex items-center gap-4"
+          className="relative duration-300 ease-linear flex items-center gap-4 cursor-pointer"
         >
           <Image
             width={48}
