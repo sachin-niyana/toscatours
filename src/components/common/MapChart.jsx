@@ -114,7 +114,6 @@ export const MapChart = () => {
   return (
     <div
       id="chart"
-      // style={{ height: "202px", width: "482px" }} // Set the height to 202px
       className="max-w-[482px] w-full h-[202px] mx-auto"
     ></div>
   );
