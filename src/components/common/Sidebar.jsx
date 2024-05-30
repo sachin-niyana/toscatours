@@ -8,7 +8,7 @@ import { usePathname } from "next/navigation";
 const SideBar = () => {
   const pathname = usePathname();
   return (
-    <div className="sm:min-w-56 lg:min-w-[295px] sm:pb-10 sm:bg-white min-h-screen sm:flex justify-between flex-col">
+    <div className="sm:min-w-56 lg:min-w-[295px] sm:pb-10 sm:bg-white h-screen overflow-y-auto sm:flex justify-between flex-col">
       <div className="pt-4 sm:pt-6">
         <Link href="/" className="hidden sm:block">
           <Image
