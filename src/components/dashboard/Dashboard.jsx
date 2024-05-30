@@ -1,9 +1,9 @@
 "use client";
 import DashboardCards from "../custom-ui/DashboardCards";
-import { DashboardCard, MonthList } from "../../components/common/Helper";
+import { DashboardCardList, MonthList } from "../../components/common/Helper";
 import { BtnArrow } from "../common/Icon";
-import Image from "next/image";
 import { useState } from "react";
+import MapChart from "../common/MapChart";
 
 export default function Dashboard() {
   const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +35,7 @@ export default function Dashboard() {
         </div>
         <div className="w-full 2xl:max-w-[1088px] mx-auto ">
           <div className="flex flex-row flex-wrap -mx-3 justify-center pb-6 md:pb-8">
-            {DashboardCard.map((obj, index) => {
+            {DashboardCardList.map((obj, index) => {
               return (
                 <DashboardCards
                   key={index}
@@ -51,9 +51,9 @@ export default function Dashboard() {
             })}
           </div>
           <div className="flex flex-row flex-wrap -mx-3 justify-center">
-            <div className=" lg:w-6/12 w-full px-3 xl:px-4 ">
+            <div className="xl:w-6/12 lg:w-8/12 md:w-10/12 w-full px-3 xl:px-4 ">
               <div className=" flex lg:block justify-center">
-                <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px]  min-h-[348px] w-full ">
+                <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px]  sm:min-h-[348px] min-h-[320px] w-full ">
                   <div className="flex justify-between items-center mb-4">
                     <p className="text-black sm:block hidden font-medium text-xl leading-normal capitalize">
                       Verkäufe
@@ -70,7 +70,7 @@ export default function Dashboard() {
                         <BtnArrow className="sm:w-10 w-7 sm:h-10 h-7" />
                       </button>
                       {Open && (
-                        <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                        <div className="origin-top-right absolute right-0 mt-2 w-44 rounded-lg shadow-lg bg-white ring-1 ring-black ring-opacity-5 z-10">
                           <ul
                             className="py-4 px-6 bg-white gap-3 flex flex-col justify-start items-center rounded-2xl lg:h-52 sm:h-44 h-36 overflow-y-scroll"
                             role="menu"
@@ -87,78 +87,15 @@ export default function Dashboard() {
                               </li>
                             ))}
                           </ul>
-                        </div>
+                        </div>  
                       )}
                     </div>
                   </div>
-                  <div className="flex flex-col justify-center">
-                    <div className="flex items-center xl:gap-4 sm:gap-3 gap-[9.8px] pb-2">
-                      <div className="flex xl:gap-[22px] sm:gap-4 gap-3 flex-col items-end">
-                        <p className="uppercase font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal text-nowrap">
-                          2 500 CHF
-                        </p>
-                        <p className="uppercase font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal text-nowrap">
-                          2 000 CHF
-                        </p>
-                        <p className="uppercase font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal text-nowrap">
-                          1 000 CHF
-                        </p>
-                        <p className="uppercase font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal text-nowrap">
-                          500 CHF
-                        </p>
-                        <p className="uppercase font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal text-nowrap">
-                          0 CHF
-                        </p>
-                      </div>
-                      <span className="max-w-[406px]">
-                        {" "}
-                        <Image
-                          width={406}
-                          height={118}
-                          src="/assets/images/png/graph-img.png"
-                          alt="graph-img"
-                          className="w-full "
-                        />
-                      </span>
-                    </div>
-                    <div className="flex lg:gap-[30px] sm:gap-6 gap-[19px] justify-center">
-                      <p className="capitalize font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal">
-                        Sun
-                      </p>
-                      <p className="capitalize font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal">
-                        Mon
-                      </p>
-                      <p className="capitalize font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal">
-                        Tue
-                      </p>
-                      <p className="capitalize font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal">
-                        Wed
-                      </p>
-                      <p className="capitalize font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal">
-                        Thu
-                      </p>
-                      <p className="capitalize font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal">
-                        Fri
-                      </p>
-                      <p className="capitalize font-normal sm:text-xs text-xs-11 text-dark-gray leading-normal">
-                        Sat
-                      </p>
-                    </div>
-                  </div>
-                  <div className="pt-4 flex gap-4 justify-center">
-                    <p className="capitalize font-normal text-xs leading-normal text-dark-gray flex gap-1 items-center group max-w-28">
-                      <span className="w-3 h-3 bg-orange rounded-full group-hover:bg-gray transition-colors ease-linear duration-300"></span>
-                      Diesen Monat
-                    </p>
-                    <p className="capitalize font-normal text-xs leading-normal text-dark-gray flex gap-1 items-center group max-w-32">
-                      <span className="w-3 h-3 bg-orange rounded-full group-hover:bg-gray transition-colors ease-linear duration-300"></span>
-                      Vorheriger Monat
-                    </p>
-                  </div>
+                  <MapChart />
                 </div>
               </div>
             </div>
-            <div className=" lg:w-6/12 w-full px-3 xl:px-4 pt-6 md:pt-8 lg:pt-0">
+            <div className="xl:w-6/12 lg:w-8/12 md:w-10/12 w-full px-3 xl:px-4 pt-6 md:pt-8 xl:pt-0">
               <div className=" flex lg:block lg:justify-end justify-center">
                 <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px]  min-h-[348px] w-full">
                   <div className="flex justify-between items-center mb-4">
@@ -230,7 +167,7 @@ export default function Dashboard() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex max-[1300px]:gap-15 xl:gap-[116px] lg:gap-6 sm:gap-[116px] gap-8 items-center">
+                    <div className="flex max-[1300px]:gap-15 2xl:gap-[116px] xl:gap-[72px] lg:gap-6 sm:gap-[116px] gap-8 items-center">
                       <p className="uppercase font-medium lg:text-sm text-xs leading-normal text-orange max-[380px]:hidden">
                         1 460 CHF
                       </p>
@@ -253,7 +190,7 @@ export default function Dashboard() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex max-[1300px]:gap-15 xl:gap-[116px] lg:gap-6 sm:gap-[116px] gap-8 items-center">
+                    <div className="flex max-[1300px]:gap-15 2xl:gap-[116px] xl:gap-[72px] lg:gap-6 sm:gap-[116px] gap-8 items-center">
                       <p className="uppercase font-medium lg:text-sm text-xs leading-normal text-orange max-[380px]:hidden">
                         1 460 CHF
                       </p>
@@ -276,7 +213,7 @@ export default function Dashboard() {
                         </p>
                       </div>
                     </div>
-                    <div className="flex max-[1300px]:gap-15 xl:gap-[116px] lg:gap-6 sm:gap-[116px] gap-8 items-center">
+                    <div className="flex max-[1300px]:gap-15 2xl:gap-[116px] xl:gap-[72px] lg:gap-6 sm:gap-[116px] gap-8 items-center">
                       <p className="uppercase font-medium lg:text-sm text-xs leading-normal text-orange max-[380px]:hidden">
                         1 460 CHF
                       </p>

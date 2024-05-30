@@ -40,9 +40,9 @@ export const SliderList = [
     image: "/assets/images/login/webp/ice-mountain.webp",
   },
 ];
-export const DashboardCard = [
+export const DashboardCardList = [
   {
-    cardicon: <UmsatzIcon />,
+    icon: <UmsatzIcon />,
     subheading: "Umsatz",
     heading: "166,580 CHF",
     grade: <GreenGrade />,
@@ -50,7 +50,7 @@ export const DashboardCard = [
     description: "im letzten Monat",
   },
   {
-    cardicon: <BuchungenIcon />,
+    icon: <BuchungenIcon />,
     subheading: "Buchungen",
     heading: "801",
     grade: <GreenGrade />,
@@ -58,12 +58,11 @@ export const DashboardCard = [
     description: "im letzten Monat",
   },
   {
-    cardicon: <KundenIcon />,
+    icon: <KundenIcon />,
     subheading: "Kunden",
     heading: "567",
     grade: <Redgrade />,
     grademark: "3%",
-    className: "text-red",
     description: "im letzten Monat",
   },
 ];
@@ -71,28 +70,28 @@ export const SidebarTab = [
   {
     icon: <DashboardIcon />,
     title: "Dashboard",
-    titleSmallscreen: "Dashboard",
+    to: "/dashboard",
   },
   {
     icon: <KundenIcon />,
     title: "Kunden",
-    titleSmallscreen: "Customers",
+    to: "/customers",
   },
   {
     icon: <AngeboteIcon />,
     title: "Angebote",
-    titleSmallscreen: "Offers",
+    to: "/angebote",
   },
   {
     icon: <BuchungenIcon />,
     title: "Buchungen",
-    titleSmallscreen: "Bookings",
+    to: "/buchungen",
   },
 
   {
     icon: <ProfileIcon />,
     title: "Profile",
-    titleSmallscreen: "Profile",
+    to: "/profile",
   },
 ];
 
@@ -138,6 +137,7 @@ export const SidebarDropdown = [
   {
     icon: <MeinProfileIcon />,
     title: "Mein Profile",
+    e: 2,
   },
   {
     icon: <SettingIcon />,
@@ -146,6 +146,7 @@ export const SidebarDropdown = [
   {
     icon: <LogOutIcon />,
     title: "Logout",
+    to: "/",
   },
 ];
 export const DashboardboxCard = [

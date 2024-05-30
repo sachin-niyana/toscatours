@@ -25,11 +25,10 @@ const LoginPage = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
-    reset,
+    formState: { errors },
+    reset, // Destructure reset function
   } = useForm({
     resolver: yupResolver(schema),
-    mode: "onChange",
   });
 
   const toggleCheck = () => {
@@ -75,7 +74,7 @@ const LoginPage = () => {
           className="w-full px-4 py-3 mt-2 bg-mist-gray border-[0.5px] outline-none border-neutral-gray rounded-full placeholder-light-gray text-black font-medium text-base !leading-[160%]"
         />
         {errors.email && (
-          <p className="text-red text-xs mt-1">{errors.email.message}</p>
+          <p className="text-orange text-xs mt-1">{errors.email.message}</p>
         )}
 
         <p className="font-normal text-xs-11 mt-4 text-dark-gray">Password</p>
@@ -96,7 +95,7 @@ const LoginPage = () => {
           </button>
         </div>
         {errors.password && (
-          <p className="text-red text-xs mt-1">{errors.password.message}</p>
+          <p className="text-orange text-xs mt-1">{errors.password.message}</p>
         )}
 
         <div className="flex items-center justify-between mt-5">
@@ -120,16 +119,11 @@ const LoginPage = () => {
           </Link>
         </div>
         {toggleError && (
-          <p className="text-red-500 text-xs mt-2 text-red">{toggleError}</p>
+          <p className="text-red-500 text-xs mt-2 text-orange">{toggleError}</p>
         )}
         <button
           type="submit"
-          className={`bg-neutral-gray transition-all ease-linear duration-300 rounded-full w-full py-2 font-medium text-xl mt-6 !leading-normal ${
-            isValid && isChecked
-              ? "hover:bg-orange hover:text-white"
-              : "opacity-50 cursor-not-allowed"
-          }`}
-          disabled={!isValid || !isChecked}
+          className="bg-neutral-gray hover:bg-orange hover:text-white transition-all ease-linear duration-300 rounded-full w-full py-2 font-medium text-xl mt-6 !leading-normal"
         >
           Log in
         </button>

@@ -6,8 +6,7 @@ import { kunden } from "../common/Helper";
 import Link from "next/link";
 
 const Table = () => {
-  // dropdown
-  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [itemsPerPage, setItemsPerPage] = useState(5); // Default number of items per page
   const totalPages = 20;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -80,7 +79,7 @@ const Table = () => {
       } else {
         buttons.push(1);
         buttons.push("...");
-        for (let i = totalPages - 4; i <= totalPages; i++) {
+        for (let i = totalPages - 5; i <= totalPages; i++) {
           buttons.push(i);
         }
       }
@@ -228,41 +227,27 @@ const Table = () => {
             <p className="text-sm text-nowrap font-medium leading-[22.5px] text-medium-gray">
               Show result:
             </p>
-            <div className="relative inline-block">
-              <button
-                onClick={toggleDropdown}
-                className="font-medium text-base leading-normal pr-1 sm:pl-4 pl-3 bg-mist-gray border border-solid border-neutral-gray rounded-lg text-light-black flex items-center"
-              >
-                {itemsPerPage}
-                <BtnArrow />
-              </button>
-              {isOpen && (
-                <div className="origin-top-right absolute bottom-11 right-0 mt-2 w-18 rounded-lg p-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-                  <ul
-                    className="py-4 px-6 bg-white gap-3 flex flex-col justify-center items-center rounded-2xl h-52 overflow-y-scroll"
-                    role="menu"
-                    aria-orientation="vertical"
-                    aria-labelledby="options-menu"
-                  >
-                    {[1, 2, 3, 4, 5, 6, 7].map((option) => (
-                      <li key={option}>
-                        <Link
-                          href="#"
-                          className="block text-black text-sm font-normal leading-normal"
-                          onClick={handleItemsPerPageChange}
-                        >
-                          {option}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              )}
-            </div>
+            <label htmlFor="numbers"></label>
+            <select
+              id="numbers"
+              className="border custom-dropdown border-neutral-gray text-sm font-medium leading-[22.5px] outline-0 rounded-lg py-2 px-3 bg-white text-black hover:bg-gray-100 focus:bg-gray-200"
+              name="numbers"
+              value={itemsPerPage}
+              onChange={handleItemsPerPageChange}
+            >
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
           </div>
-          {/* Pagination buttons */}
-          <div className="py-3 md:py-6 px-0 lg:px-6 flex gap-3 items-center ">
-            <ul className="flex gap-2">{renderPaginationButtons()}</ul>
+          <div className="flex justify-center sm:justify-end my-4 sm:mb-0 sm:mt-6">
+            <nav className="flex" aria-label="Pagination">
+              <ul className="flex gap-2">{renderPaginationButtons()}</ul>
+            </nav>
           </div>
         </div>
       </div>

@@ -22,7 +22,7 @@ const SlickSlider = () => {
   return (
     <div className="max-h-screen overflow-hidden relative">
       <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-        <LoginPage />/
+        <LoginPage />
       </div>
       <div className="bg-black opacity-50 w-full min-h-screen absolute z-10"></div>
       <Slider ref={sliderRef} {...settings}>
