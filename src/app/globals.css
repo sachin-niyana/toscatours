@@ -8,6 +8,17 @@ body {
     font-family: "Poppins", sans-serif !important;
 }
 
+.apexcharts-text tspan {
+    font-family: "Poppins", sans-serif !important;
+    @apply text-dark-gray font-normal leading-normal
+}
+
+.apexcharts-legend-text {
+    font-family: "Poppins", sans-serif !important;
+    @apply font-normal leading-normal text-xs;
+    color: #4A4A4A !important
+}
+
 .dashboard_content_width {
     @apply max-w-[1090px];
 }
