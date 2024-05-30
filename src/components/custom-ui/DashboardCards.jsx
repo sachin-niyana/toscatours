@@ -10,7 +10,7 @@ const DashboardCards = ({
   grademark,
   description,
 }) => {
-  const grademarkClass = index === 2 && "!text-red";
+  const grademarkClass = index === 2 ? "text-[red]" : "";
 
   return (
     <div className="w-full md:w-6/12 xl:w-4/12 px-3 xl:px-4 pt-6 md:pt-8">

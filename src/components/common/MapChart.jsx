@@ -111,12 +111,7 @@ export const MapChart = () => {
     };
   }, []);
 
-  return (
-    <div
-      id="chart"
-      className="sm:max-w-[482px] max-w-[298px] w-full sm:h-[202px] !h-[124px] mx-auto"
-    ></div>
-  );
+  return <div id="chart" className=" w-full mx-auto"></div>;
 };
 
 export default MapChart;
