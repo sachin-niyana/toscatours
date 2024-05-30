@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const Table = () => {
   // dropdown
-  const [itemsPerPage, setItemsPerPage] = useState(3);
+  const [itemsPerPage, setItemsPerPage] = useState(5);
   const totalPages = 20;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -118,7 +118,7 @@ const Table = () => {
   };
 
   return (
-    <div className="bg-mist-gray pt-12 pb-28 sm:py-9 xl:py-10 px-6 xl:px-12 w-full overflow-scroll max-h-[calc(100vh-104px)]">
+    <div className="bg-mist-gray pt-3 md:pt-12 pb-28 sm:py-9 xl:py-10 px-6 xl:px-12 w-full overflow-scroll max-h-[calc(100vh-104px)]">
       <div className="rounded-3xl bg-white max-w-[1088px] 2xl:max-w-full ">
         <div className="pt-6 overflow-hidden ">
           <nav className=" flex px-4 md:px-6 gap-3 md:gap-6 pb-6 justify-between items-center">
@@ -142,7 +142,7 @@ const Table = () => {
             <table className="w-full min-w-[1100px] xl:min-w-full  ">
               <thead>
                 <tr className="border-t-2 border-neutral-gray">
-                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-6">
+                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-5 md:py-6">
                     <div className="flex items-center gap-2">
                       <span className="ps-4 pe-9">
                         <input
@@ -155,26 +155,26 @@ const Table = () => {
                       <Arrows />
                     </div>
                   </th>
-                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-6">
+                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-3 md:py-6">
                     <div className="flex items-center gap-2">
                       Email
                       <Arrows />
                     </div>
                   </th>
-                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-6">
+                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-3 md:py-6">
                     <div className="flex items-center justify-center ps-5 gap-2">
                       Location
                       <Arrows />
                     </div>
                   </th>
-                  <th className="text-medium-gray font-medium text-base text-center leading-6 tracking-[0.2px] py-6">
+                  <th className="text-medium-gray font-medium text-base text-center leading-6 tracking-[0.2px] py-3 md:py-6">
                     <div className="flex items-center justify-end ps-5 gap-2">
                       Bookings
                       <Arrows />
                     </div>
                   </th>
-                  <th className="text-medium-gray font-medium text-base text-center flex justify-center leading-6 tracking-[0.2px] py-6">
-                    <div className="flex items-center gap-2">
+                  <th className="text-medium-gray font-medium text-base text-center items-center flex justify-center leading-6 tracking-[0.2px] py-3 md:py-6">
+                    <div className="flex items-center pt-2 gap-2">
                       Amount
                       <Arrows />
                     </div>
@@ -187,7 +187,7 @@ const Table = () => {
                     key={startIndex + index}
                     className="border-t-2 border-b-2 border-neutral-gray"
                   >
-                    <td className="text-base flex items-center font-semibold leading-6 text-light-black py-5">
+                    <td className="text-base flex items-center font-semibold leading-6 text-light-black py-3 md:py-5">
                       <span className="px-4 gap-8 flex items-center">
                         <input
                           className="pe-6"
@@ -201,16 +201,16 @@ const Table = () => {
                       </span>
                       {item.customerName}
                     </td>
-                    <td className="text-base font-semibold leading-6 text-light-black py-6">
+                    <td className="text-base font-semibold leading-6 text-light-black py-3 md:py-6">
                       {item.email}
                     </td>
-                    <td className="text-base font-semibold text-center leading-6 text-light-black py-6">
+                    <td className="text-base font-semibold text-center leading-6 text-light-black py-3 md:py-6">
                       {item.location}
                     </td>
-                    <td className="text-base font-semibold  text-center leading-6 text-light-black py-6">
+                    <td className="text-base font-semibold  text-center leading-6 text-light-black py-3 md:py-6">
                       {item.bookings}
                     </td>
-                    <td className="text-base pe-3 font-semibold flex items-center justify-end leading-6 text-light-black py-6">
+                    <td className="text-base pe-3 font-semibold flex items-center justify-end leading-6 text-light-black py-3 md:py-6">
                       {item.amount}
                       <span className="px-4 gap-8 flex items-center">
                         <Dots />
@@ -224,7 +224,7 @@ const Table = () => {
         </div>
         {/* dropdown */}
         <div className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 w-full">
-          <div className=" py-3 md:py-6 px-0 lg:px-6 flex gap-3 items-center ">
+          <div className=" py-3 md py-3:md:py-6 px-0 lg:px-6 flex gap-3 items-center ">
             <p className="text-sm text-nowrap font-medium leading-[22.5px] text-medium-gray">
               Show result:
             </p>
@@ -261,8 +261,8 @@ const Table = () => {
             </div>
           </div>
           {/* Pagination buttons */}
-          <div className="py-3 md:py-6 px-0 lg:px-6 flex gap-3 items-center ">
-            <ul className="flex gap-2">{renderPaginationButtons()}</ul>
+          <div className="py-3 md py-3:md:py-6 px-0 lg:px-6 flex gap-3 items-center ">
+            <ul className="flex md:gap-2">{renderPaginationButtons()}</ul>
           </div>
         </div>
       </div>
