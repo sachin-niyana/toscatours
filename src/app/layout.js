@@ -28,8 +28,8 @@ export default function RootLayout({ children }) {
               {children}{" "}
             </div>{" "}
           </div>{" "}
-        </div>{" "}
-      </body>{" "}
+        </div>
+      </body>
     </html>
   );
 }
