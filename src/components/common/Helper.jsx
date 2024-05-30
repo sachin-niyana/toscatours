@@ -91,7 +91,7 @@ export const SidebarTab = [
   {
     icon: <ProfileIcon />,
     title: "Profile",
-    to: "/Profile",
+    to: "/profile",
   },
 ];
 
