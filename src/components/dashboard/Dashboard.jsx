@@ -200,7 +200,7 @@ export default function Dashboard() {
                       </p>
                     </div>
                   </div>
-                  <div className="flex justify-between items-center pt-3 border-b border-solid border-mist-gray">
+                  <div className="flex justify-between items-center pt-3">
                     <div className="flex gap-4 xl:gap-7  items-center">
                       <p className="font-normal text-xs leading-[155%] text-light-gray">
                         3
