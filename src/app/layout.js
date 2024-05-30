@@ -16,10 +16,8 @@ export default function RootLayout({ children }) {
       <body>
         <div className="overflow-hidden w-full">
           <div className="bg-mist-gray min-h-screen flex items-start">
-            {" "}
             {pathName !== "/" && <SideBar />}{" "}
             <div className="w-full">
-              {" "}
               {pathName !== "/" && <Header />} {children}{" "}
             </div>{" "}
           </div>{" "}
