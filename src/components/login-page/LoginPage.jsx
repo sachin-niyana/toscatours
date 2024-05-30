@@ -25,11 +25,10 @@ const LoginPage = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isValid },
-    reset,
+    formState: { errors },
+    reset, // Destructure reset function
   } = useForm({
     resolver: yupResolver(schema),
-    mode: "onChange",
   });
 
   const toggleCheck = () => {
@@ -66,9 +65,7 @@ const LoginPage = () => {
         Schön, dich wiederzusehen
       </p>
       <form onSubmit={handleSubmit(onSubmit)} className="mt-6">
-        <p className="font-normal text-xs-11 text-dark-gray leading-[100%]">
-          Login
-        </p>
+        <p className="font-normal text-xs-11 text-dark-gray">Login</p>
         <input
           type="email"
           autoComplete="off"
@@ -77,17 +74,15 @@ const LoginPage = () => {
           className="w-full px-4 py-3 mt-2 bg-mist-gray border-[0.5px] outline-none border-neutral-gray rounded-full placeholder-light-gray text-black font-medium text-base !leading-[160%]"
         />
         {errors.email && (
-          <p className="text-red text-xs mt-1">{errors.email.message}</p>
+          <p className="text-orange text-xs mt-1">{errors.email.message}</p>
         )}
 
-        <p className="font-normal text-xs-11 mt-4 text-dark-gray leading-[100%]">
-          Password
-        </p>
+        <p className="font-normal text-xs-11 mt-4 text-dark-gray">Password</p>
         <div className="relative">
           <input
             autoComplete="off"
             type={showPassword ? "text" : "password"}
-            placeholder="Enter Password"
+            placeholder="Password"
             {...register("password")}
             className="w-full px-4 py-3 mt-2 bg-mist-gray border-[0.5px] outline-none border-neutral-gray rounded-full placeholder-light-gray text-black font-medium text-base !leading-[160%]"
           />
@@ -100,20 +95,20 @@ const LoginPage = () => {
           </button>
         </div>
         {errors.password && (
-          <p className="text-red text-xs mt-1">{errors.password.message}</p>
+          <p className="text-orange text-xs mt-1">{errors.password.message}</p>
         )}
 
         <div className="flex items-center justify-between mt-5">
           <div className="flex items-center gap-2">
             <div
               onClick={toggleCheck}
-              className={`w-10 h-5 flex items-center bg-gray-300 p-[1.5px] cursor-pointer transition-colors bg-mist-gray border-[0.5px] border-neutral-gray rounded-full ${
+              className={`w-10 h-6 flex items-center bg-gray-300 p-1 cursor-pointer transition-colors bg-mist-gray border-[0.5px] border-neutral-gray rounded-full ${
                 isChecked ? "bg-orange" : ""
               }`}
             >
               <div
                 className={`bg-white w-4 h-4 rounded-full shadow-md transform transition-transform ${
-                  isChecked ? "translate-x-[18px]" : ""
+                  isChecked ? "translate-x-4" : ""
                 }`}
               />
             </div>
@@ -124,21 +119,14 @@ const LoginPage = () => {
           </Link>
         </div>
         {toggleError && (
-          <p className="text-red-500 text-xs mt-2 text-red">{toggleError}</p>
+          <p className="text-red-500 text-xs mt-2 text-orange">{toggleError}</p>
         )}
-        <Link href="/dashboard">
-          <button
-            type="submit"
-            className={`bg-neutral-gray transition-all ease-linear duration-300 rounded-full !w-full py-2 font-medium text-xl mt-6 !leading-normal ${
-              isValid && isChecked
-                ? "hover:bg-orange hover:text-white"
-                : "opacity-50 cursor-not-allowed"
-            }`}
-            disabled={!isValid || !isChecked}
-          >
-            Log in
-          </button>
-        </Link>
+        <button
+          type="submit"
+          className="bg-neutral-gray hover:bg-orange hover:text-white transition-all ease-linear duration-300 rounded-full w-full py-2 font-medium text-xl mt-6 !leading-normal"
+        >
+          Log in
+        </button>
       </form>
     </div>
   );
