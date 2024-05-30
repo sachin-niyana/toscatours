@@ -19,14 +19,12 @@ export default function RootLayout({ children }) {
             {" "}
             {pathName !== "/" &&
               pathName !== "/angebote" &&
-              pathName !== "/buchungen" &&
-              pathName !== "/profile" && <SideBar />}{" "}
+              pathName !== "/buchungen" && <SideBar />}{" "}
             <div className="w-8/12 flex grow flex-col">
               {" "}
               {pathName !== "/" &&
                 pathName !== "/angebote" &&
-                pathName !== "/buchungen" &&
-                pathName !== "/profile" && <Header />}{" "}
+                pathName !== "/buchungen" && <Header />}{" "}
               {children}{" "}
             </div>{" "}
           </div>{" "}
