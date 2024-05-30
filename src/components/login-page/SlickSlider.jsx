@@ -20,23 +20,25 @@ const SlickSlider = () => {
     slidesToScroll: 1,
   };
   return (
-    <div className="max-h-screen overflow-hidden relative">
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-        <LoginPage />
+    <div className="h-screen overflow-hidden">
+      <div className="relative">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
+          <LoginPage />
+        </div>
+        <div className="bg-black opacity-50 w-full h-screen absolute z-10"></div>
+        <Slider ref={sliderRef} {...settings}>
+          {SliderList.map((obj, index) => (
+            <Image
+              key={index}
+              className="h-screen object-cover overflow-y-scroll"
+              width={1440}
+              height={900}
+              src={obj.image}
+              alt="mountain"
+            />
+          ))}
+        </Slider>
       </div>
-      <div className="bg-black opacity-50 w-full min-h-screen absolute z-10"></div>
-      <Slider ref={sliderRef} {...settings}>
-        {SliderList.map((obj, index) => (
-          <Image
-            key={index}
-            className="min-h-screen object-cover"
-            width={1440}
-            height={900}
-            src={obj.image}
-            alt="mountain"
-          />
-        ))}
-      </Slider>
     </div>
   );
 };

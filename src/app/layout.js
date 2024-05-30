@@ -16,18 +16,16 @@ export default function RootLayout({ children }) {
       <body>
         <div className="overflow-hidden w-full">
           <div className="bg-mist-gray min-h-screen flex items-start">
-            {" "}
             {pathName !== "/" &&
               pathName !== "/angebote" &&
-              pathName !== "/buchungen" && <SideBar />}{" "}
+              pathName !== "/buchungen" && <SideBar />}
             <div className="w-8/12 flex grow flex-col">
-              {" "}
               {pathName !== "/" &&
                 pathName !== "/angebote" &&
-                pathName !== "/buchungen" && <Header />}{" "}
-              {children}{" "}
-            </div>{" "}
-          </div>{" "}
+                pathName !== "/buchungen" && <Header />}
+              {children}
+            </div>
+          </div>
         </div>
       </body>
     </html>

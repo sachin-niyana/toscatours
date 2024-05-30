@@ -26,7 +26,7 @@ export default function Dashboard() {
 
   return (
     <div className="bg-mist-gray">
-      <div className="pt-12 sm:pt-9 pb-28 md:pb-0  xl:mx-8 xl:px-0 lg:px-6 px-6 max-xl:max-h-[calc(100vh-104px)] max-xl:overflow-y-scroll">
+      <div className="pt-12 sm:pt-9 pb-28 md:pb-0  xl:mx-8 xl:px-0 lg:px-6 px-6 h-[calc(100vh-104px)] overflow-y-scroll overflow-x-hidden">
         <div className="sm:hidden px-4 sm:px-0 ">
           <h2 className="font-bold text-2xl !leading-[144%]">Hi Stéphane</h2>
           <p className="font-medium text-base text-dark-gray !leading-[115%] ">

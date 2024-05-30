@@ -59,7 +59,7 @@ const Header = () => {
 
           <div className="hidden lg:flex flex-col ">
             <span className="text-2xl font-bold leading-[144%] text-black">
-              Stéphane{" "}
+              Stéphane
             </span>
             <span className="text-base font-normal leading-normal text-dark-gray">
               Geschäftsführer

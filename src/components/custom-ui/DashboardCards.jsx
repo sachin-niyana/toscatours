@@ -28,7 +28,7 @@ const DashboardCards = ({
         <div className="flex gap-1 items-center">
           <p className="flex items-center font-medium text-green text-base leading-[163%] gap-1">
             <span>{grade}</span>
-            <span className={grademarkClass}>{grademark}</span>{" "}
+            <span className={grademarkClass}>{grademark}</span>
           </p>
           <p className="font-medium text-base leading-[163%] text-light-gray">
             {description}

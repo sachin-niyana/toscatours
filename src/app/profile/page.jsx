@@ -17,7 +17,7 @@ const Page = () => {
   };
 
   return (
-    <div className="w-full mx-auto px-6 sm:px-10 pt-6 pb-16  sm:py-10 max-h-[calc(100vh-104px)] overflow-y-scroll">
+    <div className="w-full mx-auto px-6 sm:px-10 pt-6 pb-16  sm:py-10 h-[calc(100vh-104px)] overflow-y-scroll">
       <div className="max-w-[1140px] mx-auto">
         <div className="flex items-center gap-5">
           <div className=" max-w-24  lg:max-w-32">
@@ -28,10 +28,10 @@ const Page = () => {
               alt="profile Img"
               className="w-full"
             />
-          </div>{" "}
+          </div>
           <div className="">
             <h2 className="text-4xl font-bold leading-[144%] text-black">
-              Stéphane{" "}
+              Stéphane
             </h2>
             <p className="text-lg font-normal leading-normal text-dark-gray pt-1">
               Geschäftsführer
@@ -61,9 +61,7 @@ const Page = () => {
                     <div className="flex gap-1 items-center">
                       <p className="flex items-center font-medium text-green text-base leading-[163%] gap-1">
                         <span>{obj.grade}</span>
-                        <span className={grademarkClass}>
-                          {obj.grademark}
-                        </span>{" "}
+                        <span className={grademarkClass}>{obj.grademark}</span>
                       </p>
                       <p className="font-medium text-base leading-[163%] text-light-gray">
                         {obj.description}

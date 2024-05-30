@@ -118,7 +118,7 @@ const Table = () => {
   };
 
   return (
-    <div className="bg-mist-gray pt-3 md:pt-12 pb-28 sm:py-9 xl:py-10 px-6 xl:px-12 w-full overflow-scroll max-h-[calc(100vh-104px)]">
+    <div className="bg-mist-gray pt-3 md:pt-12 pb-28 sm:py-9 xl:py-10 px-6 xl:px-12 w-full overflow-scroll h-[calc(100vh-104px)]">
       <div className="rounded-3xl bg-white max-w-[1088px] 2xl:max-w-full ">
         <div className="pt-6 overflow-hidden ">
           <nav className=" flex px-4 md:px-6 gap-3 md:gap-6 pb-6 justify-between items-center">
