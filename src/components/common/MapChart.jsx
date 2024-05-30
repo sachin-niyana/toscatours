@@ -38,7 +38,7 @@ export const MapChart = () => {
   useEffect(() => {
     const weekNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
-    var options = {
+    const options = {
       series: [
         {
           name: "Diesen Monat",
@@ -52,7 +52,7 @@ export const MapChart = () => {
         },
       ],
       chart: {
-        height: 350,
+        height: 202, // Set the chart height to 202px
         type: "line",
         toolbar: {
           show: false, // Disable the toolbar
@@ -104,14 +104,20 @@ export const MapChart = () => {
       colors: ["#EC6707", "#C6C6C6"], // Colors of the lines
     };
 
-    var chart = new ApexCharts(document.querySelector("#chart"), options);
+    const chart = new ApexCharts(document.querySelector("#chart"), options);
     chart.render();
     return () => {
       chart.destroy();
     };
   }, []);
 
-  return <div id="chart" className="max-w-[406px] mx-auto"></div>;
+  return (
+    <div
+      id="chart"
+      // style={{ height: "202px", width: "482px" }} // Set the height to 202px
+      className="max-w-[482px] w-full h-[202px] mx-auto"
+    ></div>
+  );
 };
 
 export default MapChart;
