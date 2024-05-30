@@ -16,7 +16,7 @@ const Header = () => {
   const closeBtn = () => setIsSidebarDropDown(false);
   const NotificationOpen = () => setIsNotificationOpen(!isNotificationOpen);
   return (
-    <div className="sm:bg-white py-[19px] px-6 lg:px-12 border border-mist-gray w-full flex justify-between items-center ">
+    <div className="sm:bg-white py-[19px] px-6 lg:px-12 border border-mist-gray w-full flex justify-between items-center container">
       <div className="hidden sm:block">
         <h2 className="font-bold text-2xl !leading-[144%]">Hi Stéphane</h2>
         <p className="font-medium text-base text-dark-gray !leading-[115%] ">

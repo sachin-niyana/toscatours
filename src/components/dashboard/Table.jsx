@@ -1,11 +1,13 @@
 "use client"; // This directive marks the component as a Client Component
 
 import React, { useState } from "react";
-import { Arrows, Dots, Filtericon, Searchicon } from "../common/Icon";
+import { Arrows, BtnArrow, Dots, Filtericon, Searchicon } from "../common/Icon";
 import { kunden } from "../common/Helper";
+import Link from "next/link";
 
 const Table = () => {
-  const [itemsPerPage, setItemsPerPage] = useState(3); // Default number of items per page
+  // dropdown
+  const [itemsPerPage, setItemsPerPage] = useState(3);
   const totalPages = 20;
 
   const [currentPage, setCurrentPage] = useState(1);
@@ -13,11 +15,21 @@ const Table = () => {
   const handlePageChange = (page) => {
     setCurrentPage(page);
   };
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeDropdown = () => {
+    setIsOpen(false);
+  };
 
   const handleItemsPerPageChange = (event) => {
-    const newItemsPerPage = Number(event.target.value);
+    const newItemsPerPage = Number(event.target.innerText);
     setItemsPerPage(newItemsPerPage);
-    setCurrentPage(1); // Reset to the first page whenever items per page changes
+    setCurrentPage(1);
+    closeDropdown();
   };
 
   const startIndex = (currentPage - 1) * itemsPerPage;
@@ -25,30 +37,27 @@ const Table = () => {
 
   const visibleItems = kunden.slice(startIndex, endIndex);
 
-  // State to manage the checkboxes
+  //  checkboxes
   const [checkedItems, setCheckedItems] = useState(
     new Array(kunden.length).fill(false)
   );
   const [isAllChecked, setIsAllChecked] = useState(false);
 
-  // Handle the change of the master checkbox
   const handleMasterCheckboxChange = () => {
     const newCheckedState = !isAllChecked;
     setIsAllChecked(newCheckedState);
     setCheckedItems(new Array(kunden.length).fill(newCheckedState));
   };
 
-  // Handle the change of individual checkboxes
   const handleCheckboxChange = (index) => {
     const updatedCheckedItems = [...checkedItems];
     updatedCheckedItems[index] = !updatedCheckedItems[index];
     setCheckedItems(updatedCheckedItems);
 
-    // If all checkboxes are checked, set the master checkbox as checked
     const allChecked = updatedCheckedItems.every((item) => item);
     setIsAllChecked(allChecked);
   };
-
+  // pagination
   const renderPaginationButtons = () => {
     const buttons = [];
     const showDots = totalPages > 5;
@@ -109,10 +118,10 @@ const Table = () => {
   };
 
   return (
-    <div className="bg-mist-gray py-10 px-5 w-full overflow-x-hidden">
-      <div className="rounded-3xl bg-white max-w-[1088px] ">
-        <div className="pt-6 overflow-hidden">
-          <nav className="flex px-4 md:px-6 gap-3 md:gap-6 pb-6 justify-between items-center">
+    <div className="bg-mist-gray py-10 ps-4 pe-4 lg:ps-12 lg:pe-5 w-full overflow-hidden ">
+      <div className="rounded-3xl bg-white max-w-[1088px] 2xl:max-w-full ">
+        <div className="pt-6 overflow-hidden ">
+          <nav className=" flex px-4 md:px-6 gap-3 md:gap-6 pb-6 justify-between items-center">
             <div className="bg-mist-gray py-[11px] px-4 w-full flex gap-3 items-center rounded-3xl border-[.5px] border-neutral-gray">
               <Searchicon />
               <input
@@ -128,8 +137,9 @@ const Table = () => {
               Filters
             </button>
           </nav>
-          <div className="overflow-x-scroll">
-            <table className="w-full min-w-[900px]">
+
+          <div className="overflow-x-scroll max-w-full  ">
+            <table className="w-full min-w-[1100px] xl:min-w-full  ">
               <thead>
                 <tr className="border-t-2 border-neutral-gray">
                   <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-6">
@@ -152,18 +162,18 @@ const Table = () => {
                     </div>
                   </th>
                   <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-6">
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-center ps-5 gap-2">
                       Location
                       <Arrows />
                     </div>
                   </th>
-                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-6">
-                    <div className="flex items-center gap-2">
+                  <th className="text-medium-gray font-medium text-base text-center leading-6 tracking-[0.2px] py-6">
+                    <div className="flex items-center justify-end ps-5 gap-2">
                       Bookings
                       <Arrows />
                     </div>
                   </th>
-                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-6">
+                  <th className="text-medium-gray font-medium text-base text-center flex justify-center leading-6 tracking-[0.2px] py-6">
                     <div className="flex items-center gap-2">
                       Amount
                       <Arrows />
@@ -194,13 +204,13 @@ const Table = () => {
                     <td className="text-base font-semibold leading-6 text-light-black py-6">
                       {item.email}
                     </td>
-                    <td className="text-base font-semibold leading-6 text-light-black py-6">
+                    <td className="text-base font-semibold text-center leading-6 text-light-black py-6">
                       {item.location}
                     </td>
-                    <td className="text-base font-semibold leading-6 text-light-black py-6">
+                    <td className="text-base font-semibold  text-center leading-6 text-light-black py-6">
                       {item.bookings}
                     </td>
-                    <td className="text-base  font-semibold flex items-center leading-6 text-light-black py-6">
+                    <td className="text-base pe-3 font-semibold flex items-center justify-end leading-6 text-light-black py-6">
                       {item.amount}
                       <span className="px-4 gap-8 flex items-center">
                         <Dots />
@@ -212,33 +222,47 @@ const Table = () => {
             </table>
           </div>
         </div>
-        {/* Pagination bar */}
-        <div className="flex justify-between px-6 w-full">
-          <div className="p-6 flex gap-3 items-center">
-            <p className="text-sm font-medium leading-[22.5px] text-medium-gray">
+        {/* dropdown */}
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 w-full">
+          <div className=" py-3 md:py-6 px-0 lg:px-6 flex gap-3 items-center ">
+            <p className="text-sm text-nowrap font-medium leading-[22.5px] text-medium-gray">
               Show result:
             </p>
-            <label htmlFor="numbers" className=""></label>
-            <select
-              id="numbers"
-              className="border custom-dropdown border-neutral-gray text-sm font-medium leading-[22.5px] outline-0 rounded-lg py-2 px-3 bg-white text-black hover:bg-gray-100 focus:bg-gray-200"
-              name="numbers"
-              value={itemsPerPage}
-              onChange={handleItemsPerPageChange}
-            >
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-            </select>
+            <div className="relative inline-block">
+              <button
+                onClick={toggleDropdown}
+                className="font-medium text-base leading-normal pr-1 sm:pl-4 pl-3 bg-mist-gray border border-solid border-neutral-gray rounded-lg text-light-black flex items-center"
+              >
+                {itemsPerPage}
+                <BtnArrow />
+              </button>
+              {isOpen && (
+                <div className="origin-top-right absolute bottom-11 right-0 mt-2 w-18 rounded-lg p-2 shadow-lg bg-white ring-1 ring-black ring-opacity-5">
+                  <ul
+                    className="py-4 px-6 bg-white gap-3 flex flex-col justify-center items-center rounded-2xl h-52 overflow-y-scroll"
+                    role="menu"
+                    aria-orientation="vertical"
+                    aria-labelledby="options-menu"
+                  >
+                    {[1, 2, 3, 4, 5, 6, 7].map((option) => (
+                      <li key={option}>
+                        <Link
+                          href="#"
+                          className="block text-black text-sm font-normal leading-normal"
+                          onClick={handleItemsPerPageChange}
+                        >
+                          {option}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            </div>
           </div>
-          <div className="flex justify-end mt-6">
-            <nav className="flex" aria-label="Pagination">
-              <ul className="flex gap-2">{renderPaginationButtons()}</ul>
-            </nav>
+          {/* Pagination buttons */}
+          <div className="py-3 md:py-6 px-0 lg:px-6 flex gap-3 items-center ">
+            <ul className="flex gap-2">{renderPaginationButtons()}</ul>
           </div>
         </div>
       </div>

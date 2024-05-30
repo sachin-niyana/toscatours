@@ -14,10 +14,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <div className="overflow-hidden w-full">
+        <div className="overflow-hidden w-full ">
           <div className="bg-mist-gray min-h-screen flex items-start">
             {pathName !== "/" && <SideBar />}
-            <div className="w-full">
+            <div className=" flex grow  flex-col w-12/12">
               {pathName !== "/" && <Header />}
               {children}
             </div>
