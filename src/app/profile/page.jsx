@@ -1,13 +1,12 @@
 "use client";
 import React, { useState } from "react";
 import { MonthList, ProfileCardList } from "@/components/common/Helper";
-
 import Image from "next/image";
 import { BtnArrow } from "@/components/common/Icon";
 import MapChart from "@/components/common/MapChart";
 import Typewriter from "typewriter-effect";
 
-const page = () => {
+const Page = () => {
   const [Open, setOpen] = useState(false);
 
   const openDropdown = () => {
@@ -123,7 +122,7 @@ const page = () => {
             <div className="w-full xl:w-4/12 px-3 xl:px-4 pt-6 xl:pt-0 ">
               <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl max-w-[700px] w-full min-h-[280px] xl:h-full ">
                 <div className="text-xl font-normal text-black leading-normal text-center">
-                  <span>" Hi "</span>
+                  <span>&quot; Hi &quot;</span>
                   <Typewriter
                     onInit={(typewriter) => {
                       typewriter
@@ -148,4 +147,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
