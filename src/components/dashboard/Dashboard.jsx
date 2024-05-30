@@ -87,7 +87,7 @@ export default function Dashboard() {
                               </li>
                             ))}
                           </ul>
-                        </div>
+                        </div>  
                       )}
                     </div>
                   </div>
