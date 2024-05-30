@@ -91,7 +91,7 @@ export const SidebarTab = [
   {
     icon: <ProfileIcon />,
     title: "Profile",
-    to: "/Profile",
+    to: "/profile",
   },
 ];
 
@@ -146,6 +146,7 @@ export const SidebarDropdown = [
   {
     icon: <LogOutIcon />,
     title: "Logout",
+    to: "/",
   },
 ];
 export const DashboardboxCard = [
@@ -952,5 +953,29 @@ export const kunden = [
     bookings: "29",
     amount: "40 400,98 CHF",
     ballIcon: <Ball3 />,
+  },
+];
+// profile cards
+export const ProfileCardList = [
+  {
+    icon: <UmsatzIcon />,
+    subheading: "Account Balance",
+    heading: "166,580 CHF",
+  },
+  {
+    icon: <BuchungenIcon />,
+    subheading: "Buchungen",
+    heading: "801 CHF",
+    grade: <GreenGrade />,
+    grademark: "2%",
+    description: "im letzten Monat",
+  },
+  {
+    icon: <KundenIcon />,
+    subheading: "Kunden",
+    heading: "567 CHF",
+    grade: <Redgrade />,
+    grademark: "3%",
+    description: "im letzten Monat",
   },
 ];

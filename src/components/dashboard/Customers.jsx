@@ -98,7 +98,7 @@ const Customers = () => {
               <p className="text-sm font-medium  leading-[22.5px] text-medium-gray">
                 Show result:
               </p>
-              <label for="numbers" className=""></label>
+              <label for="numbers"></label>
               <select
                 id="numbers"
                 className=" border border-neutral-gray text-sm font-medium leading-[22.5px] outline-0 rounded-lg py-2 px-3"

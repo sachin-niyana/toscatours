@@ -1,8 +1,8 @@
 "use client";
-import "./globals.css";
-import SideBar from "@/components/common/Sidebar";
 import Header from "@/components/common/Header";
+import SideBar from "@/components/common/Sidebar";
 import { usePathname } from "next/navigation";
+import "./globals.css";
 
 // export const metadata = {
 //   title: "Toscatours",
@@ -16,9 +16,16 @@ export default function RootLayout({ children }) {
       <body>
         <div className="overflow-hidden w-full">
           <div className="bg-mist-gray min-h-screen flex items-start">
-            {pathName !== "/" && <SideBar />}{" "}
-            <div className="w-full">
-              {pathName !== "/" && <Header />} {children}{" "}
+            {" "}
+            {pathName !== "/" &&
+              pathName !== "/angebote" &&
+              pathName !== "/buchungen" && <SideBar />}{" "}
+            <div className="w-8/12 flex grow flex-col">
+              {" "}
+              {pathName !== "/" &&
+                pathName !== "/angebote" &&
+                pathName !== "/buchungen" && <Header />}{" "}
+              {children}{" "}
             </div>{" "}
           </div>{" "}
         </div>{" "}
