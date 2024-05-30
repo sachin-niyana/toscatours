@@ -2,6 +2,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html,
 body {
     font-family: "Poppins", sans-serif !important;
@@ -44,4 +45,10 @@ input[type="search"]::-webkit-search-cancel-button {
 .table-responsive th,
 .table-responsive td {
     white-space: nowrap;
+}
+
+@media (min-width:640.98px) {
+    .apexcharts-legend {
+        padding-top: 16px !important;
+    }
 }
