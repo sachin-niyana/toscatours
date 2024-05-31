@@ -13,8 +13,23 @@ const Table = () => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const handlePageChange = (page) => {
-    setCurrentPage(page);
+    if (page >= 1 && page <= totalPages) {
+      setCurrentPage(page);
+    }
   };
+
+  const handleNextPage = () => {
+    if (currentPage < totalPages) {
+      setCurrentPage((prevPage) => prevPage + 1);
+    }
+  };
+
+  const handlePrevPage = () => {
+    if (currentPage > 1) {
+      setCurrentPage((prevPage) => prevPage - 1);
+    }
+  };
+
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDropdown = () => {
@@ -37,7 +52,7 @@ const Table = () => {
 
   const visibleItems = kunden.slice(startIndex, endIndex);
 
-  //  checkboxes
+  // checkboxes
   const [checkedItems, setCheckedItems] = useState(
     new Array(kunden.length).fill(false)
   );
@@ -57,6 +72,7 @@ const Table = () => {
     const allChecked = updatedCheckedItems.every((item) => item);
     setIsAllChecked(allChecked);
   };
+
   // pagination
   const renderPaginationButtons = () => {
     const buttons = [];
@@ -72,7 +88,7 @@ const Table = () => {
       } else if (currentPage > 4 && currentPage < totalPages - 4) {
         buttons.push(1);
         buttons.push("...");
-        for (let i = currentPage; i <= currentPage + 1; i++) {
+        for (let i = currentPage - 1; i <= currentPage + 1; i++) {
           buttons.push(i);
         }
         buttons.push("...");
@@ -142,7 +158,7 @@ const Table = () => {
             <table className="w-full min-w-[1100px] xl:min-w-full  ">
               <thead>
                 <tr className="border-t-2 border-neutral-gray">
-                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-5 md:py-6">
+                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] my-5 md:my-6">
                     <div className="flex items-center gap-2">
                       <span className="ps-4 pe-9">
                         <input
@@ -155,26 +171,26 @@ const Table = () => {
                       <Arrows />
                     </div>
                   </th>
-                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-3 md:py-6">
+                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] my-3 md:my-6">
                     <div className="flex items-center gap-2">
                       Email
                       <Arrows />
                     </div>
                   </th>
-                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] py-3 md:py-6">
+                  <th className="text-medium-gray font-medium text-base leading-6 tracking-[0.2px] my-3 md:my-6">
                     <div className="flex items-center justify-center ps-5 gap-2">
                       Location
                       <Arrows />
                     </div>
                   </th>
-                  <th className="text-medium-gray font-medium text-base text-center leading-6 tracking-[0.2px] py-3 md:py-6">
+                  <th className="text-medium-gray font-medium text-base text-center leading-6 tracking-[0.2px] my-3 md:my-6">
                     <div className="flex items-center justify-end ps-5 gap-2">
                       Bookings
                       <Arrows />
                     </div>
                   </th>
-                  <th className="text-medium-gray font-medium text-base text-center items-center flex justify-center leading-6 tracking-[0.2px] py-3 md:py-6">
-                    <div className="flex items-center pt-2 gap-2">
+                  <th className="text-medium-gray font-medium text-base text-center items-center flex justify-center leading-6 tracking-[0.2px] my-3 md:my-6">
+                    <div className="flex items-center gap-2">
                       Amount
                       <Arrows />
                     </div>
@@ -223,7 +239,7 @@ const Table = () => {
           </div>
         </div>
         {/* dropdown */}
-        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 w-full">
+        <div className="flex flex-col md:flex-row items-center justify-center md:justify-between px-6 w-full gap-6 md:gap-3 lg:gap-6">
           <div className=" py-3 md py-3:md:py-6 px-0 lg:px-6 flex gap-3 items-center ">
             <p className="text-sm text-nowrap font-medium leading-[22.5px] text-medium-gray">
               Show result:
@@ -260,9 +276,28 @@ const Table = () => {
               )}
             </div>
           </div>
-          {/* Pagination buttons */}
-          <div className="py-3 md py-3:md:py-6 px-0 lg:px-6 flex gap-3 items-center ">
-            <ul className="flex md:gap-2">{renderPaginationButtons()}</ul>
+          <div className="flex justify-between items-center">
+            <button
+              className={`px-4 py-2 text-sm font-medium rotate-[-90deg] text-gray-600 rounded-xl ${
+                currentPage === 1 ? "cursor-not-allowed opacity-50" : ""
+              }`}
+              onClick={handlePrevPage}
+              disabled={currentPage === 1}
+            >
+              <BtnArrow className="rotate-180" />
+            </button>
+            <ul className="flex space-x-2">{renderPaginationButtons()}</ul>
+            <button
+              className={`px-4 py-2 text-sm font-medium rotate-[-90deg] text-gray-600 rounded-xl ${
+                currentPage === totalPages
+                  ? "cursor-not-allowed opacity-50"
+                  : ""
+              }`}
+              onClick={handleNextPage}
+              disabled={currentPage === totalPages}
+            >
+              <BtnArrow />
+            </button>
           </div>
         </div>
       </div>
