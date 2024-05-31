@@ -9,7 +9,7 @@ const Page = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowDashboard(true);
-    }, 2000);
+    }, 3000);
 
     return () => clearTimeout(timer);
   }, []);
