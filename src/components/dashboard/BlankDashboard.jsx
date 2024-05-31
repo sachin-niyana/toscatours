@@ -46,11 +46,9 @@ export default function BlankDashboard() {
                       <div className="w-[50px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
                       <div className="w-[35px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
                     </div>
-
                     <div className="w-[406px] sm:h-[132px] h-[100px] rounded bg-skeleton-color animate-fade"></div>
                   </div>
                   <div className="flex justify-center xl:gap-[31px] sm:gap-4 gap-3 sm:pt-[21.27px] pt-2 pb-4">
-                    {/* <SunIcon /> */}
                     <div className="w-[23px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
                     <div className="w-[26px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
                     <div className="w-[22px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
@@ -58,12 +56,6 @@ export default function BlankDashboard() {
                     <div className="w-[22px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
                     <div className="w-[14px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
                     <div className="w-[20px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
-                    {/* <MonIcon />
-                    <TueIcon />
-                    <WedIcon />
-                    <ThuIcon />
-                    <FriIcon />
-                    <SatIcon /> */}
                   </div>
                   <div className="flex gap-4 justify-center">
                     <div className="flex items-center gap-1">
@@ -74,9 +66,6 @@ export default function BlankDashboard() {
                       <div className="w-3 h-3 rounded bg-skeleton-color animate-fade"></div>
                       <div className="w-[67px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
                     </div>
-
-                    {/* <CardMonat />
-                    <CardMonat /> */}
                   </div>
                 </div>
               </div>
