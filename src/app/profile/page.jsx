@@ -17,7 +17,7 @@ const Page = () => {
   };
 
   return (
-    <div className="w-full mx-auto px-6 sm:px-10 pt-6 pb-16  sm:py-10 h-[calc(100vh-104px)] overflow-y-scroll">
+    <div className="w-full mx-auto px-6 sm:px-10 pt-6 pb-16  sm:py-10 sm:h-[calc(100vh-104px)] h-[calc(100vh-110px)] overflow-y-scroll">
       <div className="max-w-[1140px] mx-auto">
         <div className="flex items-center gap-5">
           <div className=" max-w-24  lg:max-w-32">
