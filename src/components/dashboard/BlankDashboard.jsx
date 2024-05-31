@@ -1,39 +1,4 @@
 import DashboardCards from "../custom-ui/DashboardCards";
-import {
-  CardSale1,
-  CardBtn,
-  BtnArrowIcon,
-  CardChf1,
-  CardChf2,
-  CardChf3,
-  CardChf4,
-  CardChf5,
-  DashboardImg,
-  SunIcon,
-  MonIcon,
-  TueIcon,
-  WedIcon,
-  ThuIcon,
-  FriIcon,
-  SatIcon,
-  CardMonat,
-  CardSale2,
-  NoIcon,
-  ProductIcon,
-  PriceIcon,
-  ItemSaleIcon,
-  ProductNo1,
-  ProductNo2,
-  ProductNo3,
-  ProductName,
-  ProductDate1,
-  ProductDate2,
-  ProductDate3,
-  ProductPrice,
-  SaleItem1,
-  SaleItem2,
-  SaleItem3,
-} from "../common/Icon";
 import { DashboardboxCard } from "../common/Helper";
 
 export default function BlankDashboard() {
@@ -64,37 +29,54 @@ export default function BlankDashboard() {
           </div>
           <div className="flex flex-row flex-wrap -mx-3 justify-center">
             <div className="xl:w-6/12 lg:w-8/12 md:w-10/12 w-full px-3 xl:px-4 ">
-              <div className=" flex lg:block justify-center">
-                <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px]  sm:min-h-[348px] min-h-[320px] w-full ">
+              <div className="flex lg:block justify-center">
+                <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px] sm:min-h-[348px] min-h-[290px] w-full ">
                   <div className="flex justify-between items-center pb-6 xl:pr-8">
-                    <CardSale1 />
+                    <div className="w-[54px] h-[30px] bg-skeleton-color animate-fade rounded"></div>
                     <div className="flex gap-4 items-center">
-                      <CardBtn />
-                      <BtnArrowIcon />
+                      <div className="w-[90px] h-[26px] rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-2 h-1 rounded bg-skeleton-color animate-fade"></div>
                     </div>
                   </div>
                   <div className="flex gap-4 items-center">
                     <div className="flex flex-col xl:gap-[22px] sm:gap-4 gap-2 items-end">
-                      <CardChf1 />
-                      <CardChf2 />
-                      <CardChf3 />
-                      <CardChf4 />
-                      <CardChf5 />
+                      <div className="w-[60px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-[60px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-[57px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-[50px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-[35px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
                     </div>
-                    <DashboardImg />
+
+                    <div className="w-[406px] sm:h-[132px] h-[100px] rounded bg-skeleton-color animate-fade"></div>
                   </div>
                   <div className="flex justify-center xl:gap-[31px] sm:gap-4 gap-3 sm:pt-[21.27px] pt-2 pb-4">
-                    <SunIcon />
-                    <MonIcon />
+                    {/* <SunIcon /> */}
+                    <div className="w-[23px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                    <div className="w-[26px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                    <div className="w-[22px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                    <div className="w-[28px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                    <div className="w-[22px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                    <div className="w-[14px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                    <div className="w-[20px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                    {/* <MonIcon />
                     <TueIcon />
                     <WedIcon />
                     <ThuIcon />
                     <FriIcon />
-                    <SatIcon />
+                    <SatIcon /> */}
                   </div>
                   <div className="flex gap-4 justify-center">
-                    <CardMonat />
-                    <CardMonat />
+                    <div className="flex items-center gap-1">
+                      <div className="w-3 h-3 rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-[67px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <div className="w-3 h-3 rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-[67px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
+                    </div>
+
+                    {/* <CardMonat />
+                    <CardMonat /> */}
                   </div>
                 </div>
               </div>
@@ -103,59 +85,59 @@ export default function BlankDashboard() {
               <div className=" flex lg:block lg:justify-end justify-center">
                 <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl xl:max-w-[528px]  min-h-[348px] w-full">
                   <div className="flex justify-between items-center pb-6 xl:pr-8">
-                    <CardSale2 />
+                    <div className="w-[103px] h-[30px] rounded bg-skeleton-color animate-fade"></div>
                     <div className="flex gap-4 items-center">
-                      <CardBtn />
-                      <BtnArrowIcon />
+                      <div className="w-[90px] h-[26px] rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-2 h-1 rounded bg-skeleton-color animate-fade"></div>
                     </div>
                   </div>
                   <div className="flex justify-between">
                     <div className="flex gap-4">
-                      <NoIcon />
-                      <ProductIcon />
+                      <div className="w-[23px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-[55px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
                     </div>
                     <div className="flex xl:gap-[109.89px] sm:gap-24 gap-12">
-                      <PriceIcon />
-                      <ItemSaleIcon />
+                      <div className="w-[35px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-[67px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
                     </div>
                   </div>
                   <div className="pt-7 flex justify-between items-center">
                     <div className="flex sm:gap-7 gap-4 items-center">
-                      <ProductNo1 />
+                      <div className="w-1 h-[18px] rounded bg-skeleton-color animate-fade"></div>
                       <div className="flex flex-col gap-1">
-                        <ProductName />
-                        <ProductDate1 />
+                        <div className="sm:w-[137px] min-[356px]:w-[100px] w-[68px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
+                        <div className="sm:w-[140px] min-[356px]:w-[100px] w-[68px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
                       </div>
                     </div>
-                    <div className="flex xl:gap-[115.92px] sm:gap-[100px] gap-10">
-                      <ProductPrice />
-                      <SaleItem1 />
+                    <div className="flex xl:gap-[115.92px] md:gap-[100px] sm:gap-[60px] gap-9">
+                      <div className="sm:w-[68px] w-[55px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-[43px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
                     </div>
                   </div>
                   <div className="pt-7 flex justify-between items-center">
                     <div className="flex sm:gap-7 gap-4 items-center">
-                      <ProductNo2 />
+                      <div className="w-2 h-[18px] rounded bg-skeleton-color animate-fade"></div>
                       <div className="flex flex-col gap-1">
-                        <ProductName />
-                        <ProductDate2 />
+                        <div className="sm:w-[137px] min-[356px]:w-[100px] w-[68px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
+                        <div className="sm:w-[134px] min-[356px]:w-[100px] w-[68px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
                       </div>
                     </div>
-                    <div className="flex xl:gap-[115.92px] sm:gap-[100px] gap-10">
-                      <ProductPrice />
-                      <SaleItem2 />
+                    <div className="flex xl:gap-[115.92px] md:gap-[100px] sm:gap-[60px] gap-9">
+                      <div className="sm:w-[68px] w-[55px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
+                      <div className="w-[42px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
                     </div>
                   </div>
                   <div className="pt-7 flex justify-between items-center">
                     <div className="flex sm:gap-7 gap-4 items-center">
-                      <ProductNo3 />
+                      <div className="w-2 h-[18px] rounded bg-skeleton-color animate-fade"></div>
                       <div className="flex flex-col gap-1">
-                        <ProductName />
-                        <ProductDate3 />
+                        <div className="sm:w-[137px] min-[356px]:w-[100px] w-[68px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
+                        <div className="sm:w-[131px] min-[356px]:w-[100px] w-[68px] h-[18px] rounded bg-skeleton-color animate-fade"></div>
                       </div>
                     </div>
-                    <div className="flex xl:gap-[115.92px] sm:gap-[100px] gap-10">
-                      <ProductPrice />
-                      <SaleItem3 />
+                    <div className="flex xl:gap-[115.92px] md:gap-[100px] sm:gap-[60px] gap-9">
+                      <div className="sm:w-[68px] w-[55px] h-[21px] bg-skeleton-color animate-fade rounded"></div>
+                      <div className="w-[38px] h-[21px] rounded bg-skeleton-color animate-fade"></div>
                     </div>
                   </div>
                 </div>
