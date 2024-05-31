@@ -75,7 +75,7 @@ const Page = () => {
           <div className="flex flex-row flex-wrap -mx-3 justify-center mb-14 sm:mb-0">
             <div className="w-full xl:w-8/12 px-3 xl:px-4 ">
               <div className=" flex lg:block justify-center mb-6 sm:mb-0">
-                <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl max-w-[700px] w-full ">
+                <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl max-w-[700px] mx-auto w-full ">
                   <div className="flex justify-between items-center mb-4">
                     <p className="text-black sm:block hidden font-medium text-xl leading-normal capitalize">
                       Verkäufe
@@ -118,14 +118,14 @@ const Page = () => {
               </div>
             </div>
             <div className="w-full xl:w-4/12 px-3 xl:px-4 pt-6 xl:pt-0 ">
-              <div className="py-6 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl max-w-[700px] w-full min-h-[280px] xl:h-full ">
+              <div className="py-4 px-4 xl:px-6 hover:shadow-xs transition-all ease-linear duration-300 bg-white rounded-3xl max-w-[700px] mx-auto w-full max-sm:min-h-[280px] xl:h-full ">
                 <div className="text-xl font-normal text-black leading-normal text-center">
                   <span>&quot; Hi &quot;</span>
                   <Typewriter
                     onInit={(typewriter) => {
                       typewriter
                         .typeString(
-                          "Stephen William Hawking was a British physicist, born on 8th January 1942. Over his entire profound career, Hawking reshaped scientific thinking of the universe, especially black holes and their illusive properties."
+                          "Stephen William Hawking was a British physicist, born on 8th January 1942. Hawking reshaped scientific thinking of the universe, especially black holes and their illusive properties."
                         )
                         .start();
                     }}
