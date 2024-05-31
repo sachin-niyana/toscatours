@@ -10,8 +10,10 @@ import { CloseEyes, OpenEyes } from "../common/Icon";
 const schema = yup.object().shape({
   email: yup
     .string()
-    .email("Invalid email format")
-    .required("Email is required"),
+    .required("Email or phone number is required")
+    .test("valid", "Invalid format", function (value) {
+      return /^\d{10,}$/.test(value) || /^\S+@gmail.com$/.test(value);
+    }),
   password: yup
     .string()
     .min(6, "Password must be at least 6 characters")
