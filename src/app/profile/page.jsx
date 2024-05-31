@@ -42,7 +42,7 @@ const Page = () => {
         <div className="w-full ">
           <div className="flex flex-row flex-wrap -mx-3 justify-center pb-6 md:pb-8">
             {ProfileCardList.map((obj, index) => {
-              const grademarkClass = index === 2 && "text-red";
+              const grademarkClass = index === 2 ? "text-red" : "";
               return (
                 <div
                   key={index}

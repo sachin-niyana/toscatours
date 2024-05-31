@@ -16,8 +16,8 @@ export const UmsatzIcon = () => {
         d="M15.3333 15.652C14.597 15.652 14 16.249 14 16.9853C14 17.7217 14.597 18.3187 15.3333 18.3187C16.0697 18.3187 16.6667 17.7217 16.6667 16.9853C16.6667 16.249 16.0697 15.652 15.3333 15.652ZM15.3333 15.652H10.196C9.88859 15.652 9.73462 15.652 9.60807 15.5973C9.49644 15.5491 9.39959 15.4714 9.32903 15.3724C9.24994 15.2613 9.21813 15.1129 9.15516 14.819L7.51432 7.16176C7.44989 6.86109 7.41725 6.71092 7.33724 6.59861C7.26668 6.49956 7.16985 6.42161 7.05821 6.37336C6.93164 6.31866 6.77853 6.31866 6.47102 6.31866H6M8 8.31866H16.5821C17.0633 8.31866 17.3037 8.31866 17.4652 8.4189C17.6066 8.50671 17.7102 8.64441 17.7554 8.80467C17.8069 8.98762 17.7407 9.21864 17.6073 9.68097L16.6842 12.881C16.6045 13.1574 16.5646 13.2954 16.4837 13.3979C16.4123 13.4885 16.3181 13.5593 16.2114 13.6028C16.0908 13.652 15.9474 13.652 15.6614 13.652H9.15365M9.33333 18.3187C8.59695 18.3187 8 17.7217 8 16.9853C8 16.249 8.59695 15.652 9.33333 15.652C10.0697 15.652 10.6667 16.249 10.6667 16.9853C10.6667 17.7217 10.0697 18.3187 9.33333 18.3187Z"
         stroke="#EC6707"
         strokeWidth="1.33333"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -35,8 +35,8 @@ export const GreenGrade = () => {
         d="M13.334 4.66666L9.43652 8.62499C9.36653 8.69608 9.33114 8.7317 9.2998 8.75975C8.79356 9.21286 8.02805 9.21287 7.52181 8.75976C7.49047 8.7317 7.45482 8.69611 7.38478 8.62498C7.31475 8.55386 7.27971 8.51827 7.24837 8.49022C6.74213 8.03711 5.9763 8.03711 5.47006 8.49022C5.4388 8.51821 5.40387 8.55368 5.33418 8.62446L2.66699 11.3333M13.334 4.66666L13.3337 8.66666M13.334 4.66666H9.33366"
         stroke="#26A212"
         strokeWidth="1.33333"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -54,8 +54,8 @@ export const Redgrade = () => {
         d="M12.001 8.33332L8.10352 4.37499C8.03351 4.30389 7.99813 4.26827 7.9668 4.24022C7.46055 3.78711 6.69504 3.78711 6.1888 4.24022C6.15746 4.26828 6.12181 4.30386 6.05177 4.37499C5.98174 4.44611 5.9467 4.4817 5.91536 4.50975C5.40912 4.96286 4.6433 4.96286 4.13705 4.50975C4.10571 4.48169 4.07069 4.44613 4.00065 4.37499L1.33398 1.66666M12.001 8.33332L12.0007 4.33332M12.001 8.33332H8.00065"
         stroke="#FF3B30"
         strokeWidth="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -75,7 +75,7 @@ export const BtnArrow = (props) => {
         stroke="#646464"
         strokeWidth="2"
         strokeLinecap="round"
-        stroke-linejoin="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -389,9 +389,9 @@ export const CardIcon = () => {
           y2="10.2032"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_4007_822"
@@ -401,9 +401,9 @@ export const CardIcon = () => {
           y2="11.4202"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -428,9 +428,9 @@ export const CardSubHeading = () => {
           y2="11.0535"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -460,9 +460,9 @@ export const Heading1 = () => {
           y2="20.4064"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -493,9 +493,9 @@ export const Heading2 = () => {
           y2="20.4064"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -526,9 +526,9 @@ export const Heading3 = () => {
           y2="20.4064"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -560,9 +560,9 @@ export const Grade = () => {
           y2="3.50085"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -587,9 +587,9 @@ export const GradeMark = () => {
           y2="11.0535"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -619,9 +619,9 @@ export const Description = () => {
           y2="11.0535"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -646,9 +646,9 @@ export const CardSale1 = () => {
           y2="12.754"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -678,9 +678,9 @@ export const CardSale2 = () => {
           y2="12.754"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -705,9 +705,9 @@ export const CardBtn = () => {
           y2="11.0535"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -732,9 +732,9 @@ export const BtnArrowIcon = () => {
           y2="1.70053"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -765,9 +765,9 @@ export const CardChf1 = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -798,9 +798,9 @@ export const CardChf2 = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -831,9 +831,9 @@ export const CardChf3 = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -864,9 +864,9 @@ export const CardChf4 = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -897,9 +897,9 @@ export const CardChf5 = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -940,9 +940,9 @@ export const DashboardImg = () => {
           y2="51.1414"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_4042_822"
@@ -952,9 +952,9 @@ export const DashboardImg = () => {
           y2="85.386"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -985,9 +985,9 @@ export const SunIcon = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1018,9 +1018,9 @@ export const MonIcon = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1051,9 +1051,9 @@ export const TueIcon = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1084,9 +1084,9 @@ export const WedIcon = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1117,9 +1117,9 @@ export const ThuIcon = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1150,9 +1150,9 @@ export const FriIcon = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1183,9 +1183,9 @@ export const SatIcon = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1217,9 +1217,9 @@ export const CardMonat = () => {
           y2="8.1016"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
         <linearGradient
           id="paint1_linear_4043_822"
@@ -1229,9 +1229,9 @@ export const CardMonat = () => {
           y2="7.6524"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1256,9 +1256,9 @@ export const NoIcon = () => {
           y2="8.92781"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1283,9 +1283,9 @@ export const ProductIcon = () => {
           y2="8.92781"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1316,9 +1316,9 @@ export const PriceIcon = () => {
           y2="8.92781"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1349,9 +1349,9 @@ export const ItemSaleIcon = () => {
           y2="8.92781"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1382,9 +1382,9 @@ export const ProductNo1 = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1415,9 +1415,9 @@ export const ProductNo2 = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1448,9 +1448,9 @@ export const ProductNo3 = () => {
           y2="7.65241"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1481,9 +1481,9 @@ export const ProductName = () => {
           y2="8.9278"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1514,9 +1514,9 @@ export const ProductDate1 = () => {
           y2="7.6524"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1547,9 +1547,9 @@ export const ProductDate2 = () => {
           y2="7.6524"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1580,9 +1580,9 @@ export const ProductDate3 = () => {
           y2="7.6524"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1613,9 +1613,9 @@ export const ProductPrice = () => {
           y2="8.92781"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1646,9 +1646,9 @@ export const SaleItem1 = () => {
           y2="8.92781"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1679,9 +1679,9 @@ export const SaleItem2 = () => {
           y2="8.92781"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1712,9 +1712,9 @@ export const SaleItem3 = () => {
           y2="8.92781"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="#F1EFEF" />
-          <stop offset="0.53125" stop-color="#F9F8F8" />
-          <stop offset="0.992158" stop-color="#E7E5E5" />
+          <stop stopColor="#F1EFEF" />
+          <stop offset="0.53125" stopColor="#F9F8F8" />
+          <stop offset="0.992158" stopColor="#E7E5E5" />
         </linearGradient>
       </defs>
     </svg>
@@ -1734,8 +1734,8 @@ export const Searchicon = () => {
         d="M15 15.2195L21 21.2195M10 17.2195C6.13401 17.2195 3 14.0855 3 10.2195C3 6.35352 6.13401 3.21951 10 3.21951C13.866 3.21951 17 6.35352 17 10.2195C17 14.0855 13.866 17.2195 10 17.2195Z"
         stroke="black"
         strokeWidth="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1753,8 +1753,8 @@ export const Filtericon = () => {
         d="M20 5.81961C20 5.25956 19.9996 4.97932 19.8906 4.76541C19.7948 4.57725 19.6423 4.42438 19.4542 4.32851C19.2403 4.21951 18.9597 4.21951 18.3996 4.21951H5.59961C5.03956 4.21951 4.75981 4.21951 4.5459 4.32851C4.35774 4.42438 4.20487 4.57725 4.10899 4.76541C4 4.97932 4 5.25956 4 5.81961V6.55687C4 6.80146 4 6.92385 4.02763 7.03893C4.05213 7.14097 4.09263 7.23844 4.14746 7.32791C4.20928 7.4288 4.29591 7.51542 4.46875 7.68826L9.53149 12.751C9.70443 12.9239 9.79044 13.01 9.85228 13.1109C9.90711 13.2003 9.94816 13.2981 9.97266 13.4002C10 13.5141 10 13.635 10 13.8747V18.6305C10 19.4877 10 19.9166 10.1805 20.1747C10.3382 20.4001 10.5814 20.5505 10.8535 20.5907C11.1651 20.6367 11.5487 20.4453 12.3154 20.0619L13.1154 19.6619C13.4365 19.5014 13.5966 19.4208 13.7139 19.3011C13.8176 19.1952 13.897 19.068 13.9453 18.9279C14 18.7694 14 18.5895 14 18.2305V13.8821C14 13.6375 14 13.5153 14.0276 13.4002C14.0521 13.2981 14.0926 13.2003 14.1475 13.1109C14.2089 13.0106 14.2947 12.9248 14.4653 12.7542L14.4688 12.751L19.5315 7.68826C19.7044 7.51531 19.7904 7.42883 19.8523 7.32791C19.9071 7.23844 19.9482 7.14097 19.9727 7.03894C20 6.92502 20 6.80395 20 6.56431V5.81961Z"
         stroke="black"
         strokeWidth="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1772,22 +1772,22 @@ export const Dots = () => {
         d="M7.33301 12.2197C7.33301 12.5879 7.63148 12.8864 7.99967 12.8864C8.36786 12.8864 8.66634 12.5879 8.66634 12.2197C8.66634 11.8515 8.36786 11.553 7.99967 11.553C7.63148 11.553 7.33301 11.8515 7.33301 12.2197Z"
         stroke="#4A4A4A"
         strokeWidth="1.33333"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M7.33301 8.21971C7.33301 8.5879 7.63148 8.88637 7.99967 8.88637C8.36786 8.88637 8.66634 8.5879 8.66634 8.21971C8.66634 7.85152 8.36786 7.55304 7.99967 7.55304C7.63148 7.55304 7.33301 7.85152 7.33301 8.21971Z"
         stroke="#4A4A4A"
         strokeWidth="1.33333"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
       <path
         d="M7.33301 4.21971C7.33301 4.5879 7.63148 4.88637 7.99967 4.88637C8.36786 4.88637 8.66634 4.5879 8.66634 4.21971C8.66634 3.85152 8.36786 3.55304 7.99967 3.55304C7.63148 3.55304 7.33301 3.85152 7.33301 4.21971Z"
         stroke="#4A4A4A"
         strokeWidth="1.33333"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1805,8 +1805,8 @@ export const Arrows = () => {
         d="M7.33301 10.8863L5.33301 12.8863M5.33301 12.8863L3.33301 10.8863M5.33301 12.8863V3.55295M8.66634 5.55295L10.6663 3.55295M10.6663 3.55295L12.6663 5.55295M10.6663 3.55295V12.8863"
         stroke="#4A4A4A"
         strokeWidth="1.33333"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );
@@ -1846,7 +1846,7 @@ export const Ball3 = () => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clilPath="url(#clip0_2162_656)">
+      <g clipPath="url(#clip0_2162_656)">
         <g mask="url(#mask0_2162_656)">
           <path d="M40 0.219849H0V40.2198H40V0.219849Z" fill="#405059" />
           <path

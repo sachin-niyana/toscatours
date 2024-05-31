@@ -8,7 +8,7 @@ const Error = () => {
   return (
     <>
       {isSidebarDropDown && (
-        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50">
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black bg-opacity-50 px-3 sm:px-0">
           <div className="bg-white w-96 p-8 rounded-md shadow-lg relative flex flex-col ">
             <h2 className="text-2xl font-bold leading-[144%] text-red text-center absolute top-2 left-2">
               Error :

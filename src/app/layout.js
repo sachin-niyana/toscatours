@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   const pathName = usePathname();
   return (
     <html lang="en">
-      <body>
+      <body suppressHydrationWarning={true}>
         <div className="overflow-hidden w-full">
           <div className="bg-mist-gray min-h-screen flex items-start">
             {pathName !== "/" &&
